@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    background-color: #3f3f3f;
+    width: 100%;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    background-color: #80011f;
+}
+
+header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 10px 0;
+
+    height: 100px;
+}
+
+header img:hover {
+    padding: 0;
+    height: 120px;
+}
+
+nav {
+    background-color: #232323;
+    color: #E5E5E5;
+    border-top: 0.5em #66011A solid;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+
+    font-size: 20px;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-weight: 300;
+
+    overflow: hidden;
+}
+
+nav a {
+    float: left;
+    text-align: center;
+
+    color: #E5E5E5;
+    text-decoration: none;
+    padding: 0em 2em;
+}
+
+.secondary-nav {
+    float: left;
+    overflow: hidden;
+}
+
+.secondary-nav .secondary-nav-button {
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    padding: 0em 2em;
+
+    font-size: inherit;
+    font-weight: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+nav a:hover, .secondary-nav:hover .secondary-nav-button {
+    background-color: #E5E5E5;
+    color: #3f3f3f;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.secondary-nav-content {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #E5E5E5;
+    width: 100%;
+    z-index: 1;
+}
+
+.secondary-nav-content a {
+    float: left;
+    color: #3f3f3f;
+    text-decoration: none;
+}
+
+.secondary-nav:hover .secondary-nav-content {
+    display: block;
+}
+
+div.secondary-nav-content a:hover {
+    color: #E5E5E5;
+    background-color: #80011e;
+}
