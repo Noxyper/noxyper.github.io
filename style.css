@@ -5,8 +5,9 @@ body {
 }
 
 header {
-    position: absolute;
+    position: fixed;
     width: 100%;
+    z-index: 1;
     background-color: #80011f;
 }
 
@@ -47,7 +48,7 @@ nav a {
 
     color: #E5E5E5;
     text-decoration: none;
-    padding: 0em 2em;
+    padding: 0rem 2rem;
 }
 
 .secondary-nav {
@@ -60,7 +61,7 @@ nav a {
     outline: none;
     color: white;
     background-color: inherit;
-    padding: 0em 2em;
+    padding: 0rem 2rem;
 
     font-size: inherit;
     font-weight: inherit;
@@ -97,4 +98,52 @@ nav a:hover, .secondary-nav:hover .secondary-nav-button {
 div.secondary-nav-content a:hover {
     color: #E5E5E5;
     background-color: #80011e;
+}
+
+section {
+    height: 100vh;
+}
+
+section div {
+    height: 33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0rem 1rem;
+}
+
+div.top img, div.center img, div.bottom img {
+    position: absolute;
+    clip-path: polygon(85.35534% 14.64466%, 27.30047% 5.449671%, .6155849% 57.82173%, 42.17827% 99.38442%, 94.55032% 72.69953%);
+}
+
+div.center *, div.bottom * {
+    padding: 0 .25rem;
+}
+
+div.center h1, div.bottom h1 {
+    text-align: center;
+    width: 25%;
+    margin: 0;
+    font-size: 250%;
+    font-family: 'Hind Siliguri', sans-serif;
+    color: #E5E5E5;
+    font-weight: 600;
+}
+
+div.center p, div.bottom p {
+    text-align: left;
+    margin: 0;
+    color: #E5E5E5;
+    width: 75%;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: 'Hind Siliguri', sans-serif;
+    font-weight: 300;
+}
+
+.info {
+    margin: 0 auto;
+    width: 100%;
 }
