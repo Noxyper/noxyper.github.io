@@ -12,16 +12,18 @@ header {
 }
 
 header img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
+	float: left;
     padding: 10px 0;
-
     height: 100px;
 }
 
-header img:hover {
+.logos::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+header a img:hover {
     padding: 0;
     height: 120px;
 }
@@ -115,7 +117,7 @@ section div {
 
 div.top img, div.center img, div.bottom img {
     position: absolute;
-    clip-path: polygon(85.35534% 14.64466%, 27.30047% 5.449671%, .6155849% 57.82173%, 42.17827% 99.38442%, 94.55032% 72.69953%);
+    clip-path: polygon(15% 15%, 5% 90%, 95% 95%, 90% 10%);
 }
 
 div.center *, div.bottom * {
@@ -137,7 +139,7 @@ div.center p, div.bottom p {
     margin: 0;
     color: #E5E5E5;
     width: 75%;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 24px;
     font-family: 'Hind Siliguri', sans-serif;
     font-weight: 300;
