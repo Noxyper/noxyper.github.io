@@ -103,7 +103,7 @@ div.secondary-nav-content a:hover {
 }
 
 section {
-    height: 100vh;
+    height: 50vw;
 }
 
 section div {
@@ -133,7 +133,7 @@ div.top h1, div.center h1, div.bottom h1 {
     text-align: center;
     width: 25%;
     margin: 0;
-    font-size: 250%;
+    font-size: 2.5vw;
     font-family: 'Hind Siliguri', sans-serif;
     color: #E5E5E5;
     font-weight: 600;
@@ -144,8 +144,8 @@ div.top p, div.center p, div.bottom p {
     margin: 0;
     color: #E5E5E5;
     width: 75%;
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 1vw;
+    line-height: 1.33333vw;
     font-family: 'Hind Siliguri', sans-serif;
     font-weight: 300;
 }
@@ -154,6 +154,7 @@ div.projects img {
 	float: left;
 	padding: 0 0;
 	border: 0.25em #3f3f3f solid;
+	width: 20vw;
 }
 
 .info {
