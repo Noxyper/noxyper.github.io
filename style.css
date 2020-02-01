@@ -12,15 +12,15 @@ header {
 }
 
 header img {
-	float: left;
+    float: left;
     padding: 10px 0;
     height: 100px;
 }
 
 .logos::after {
-	content: "";
-	clear: both;
-	display: table;
+    content: "";
+    clear: both;
+    display: table;
 }
 
 header a img:hover {
@@ -29,7 +29,7 @@ header a img:hover {
 }
 
 nav {
-    background-color: #232323;
+    background-color: #1C1C1C;
     color: #E5E5E5;
     border-top: 0.5em #66011A solid;
 
@@ -115,16 +115,21 @@ section div {
     padding: 0rem 1rem;
 }
 
-div.top img, div.center img, div.bottom img {
-    position: absolute;
-    clip-path: polygon(15% 15%, 5% 90%, 95% 95%, 90% 10%);
+.projects::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
-div.center *, div.bottom * {
+div.top img, div.center img, div.bottom img {
+    
+}
+
+div.top *, div.center *, div.bottom * {
     padding: 0 .25rem;
 }
 
-div.center h1, div.bottom h1 {
+div.top h1, div.center h1, div.bottom h1 {
     text-align: center;
     width: 25%;
     margin: 0;
@@ -134,7 +139,7 @@ div.center h1, div.bottom h1 {
     font-weight: 600;
 }
 
-div.center p, div.bottom p {
+div.top p, div.center p, div.bottom p {
     text-align: left;
     margin: 0;
     color: #E5E5E5;
@@ -143,6 +148,12 @@ div.center p, div.bottom p {
     line-height: 24px;
     font-family: 'Hind Siliguri', sans-serif;
     font-weight: 300;
+}
+
+div.projects img {
+	float: left;
+	padding: 0 0;
+	border: 0.25em #3f3f3f solid;
 }
 
 .info {
