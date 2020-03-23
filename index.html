@@ -8,6 +8,8 @@
 		<link rel="icon" type="image/png" href="Assets/WhiskeyIcon.png">
         <link rel="stylesheet" type="text/css" href="style.css" />
         <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,400,600&display=swap" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/14b0c5612d.js" crossorigin="anonymous"></script>
 
         <title>Nemo Wirén</title>
 		
@@ -18,23 +20,35 @@
 			<img src="Assets/Nemo Banner.png" class="logo">
             <nav>
 				<div>
-					<a href=#about-me>About Me</a>
-					<a href=#project>Projects</a>
-					<a href=#contact>Contact</a>
+					<a href="index.html">About Me</a>
+					<a href="project.html">Projects</a>
+					<a href="contact.html">Contact</a>
 				</div>
             </nav>
 		</header>
+		<div class="nav-offset"></div>
 		<section id="about-me">
 			<div class="background">
 				<div id="hexProfile">
+					<img src="Assets/Nemo Banner Condensed.png" class="name" style="position: absolute;">
 				</div>
 				<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js'></script>
 				<script type='text/javascript'>
 					var images=['Laugh.png', 'Phone.png', 'Squat.png', 'Dumb.png'];
 					
-					$('<img src="Assets/Hex Profiles/HexProfile ' + images[Math.floor(Math.random() * images.length)] + '" style="width: 100vh;">').appendTo('#hexProfile');
+					$('<img src="Assets/Hex Profiles/HexProfile ' + images[Math.floor(Math.random() * images.length)] + '" style="width: 80vh;">').appendTo('#hexProfile');
 				</script>
 			</div>
+			<div class="paragraph">
+			<p>I'm a programmer first, but I really enjoy writing and reading stories as well. I have played games for a long time, with some of my favourite games being Mass Effect, Fallout 4, and Phoenix Wright: Ace Attorney, but I also enjoy a good party game every now and then. I'm also a bit of a movie buff, with Edgar Wright's movies leading the charge (Baby Driver being probably the favourite) and Whiplash coming right after the Cornetto trilogy. I can hold my own pretty well, I'm pretty thick skinned when it comes to critisism. I'm one of those who can differentiate between professionalism whilst working and acting casually when on a break. I'm also a big fan of penguins.</p>
+			</div>
+			<footer>
+				<ul class="socials">
+					<a href="mailto: n.n.wiren@gmail.com" class="fas fa-at"></a>
+					<a href="https://www.twitter.com/Noxyper" class="fab fa-twitter"></a>
+					<a href="https://noxyper.itch.io/" class="fab fa-itch-io"></a>
+				</ul>
+			</footer>
         </section>
 	</body>
 </html>
