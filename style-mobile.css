@@ -1,0 +1,352 @@
+body {
+    margin: 0;
+    width: 100%;
+	background-color: #cccccc;
+	background-repeat: repeat;
+	background-size: 40vmax;
+}
+
+header {
+	height: 15vh;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    background-color: #cccccc;
+	background-repeat: repeat;
+	background-size: 40vmax;
+}
+
+header img {
+	transition: 0.2s cubic-bezier(1, -1, 0, 2);
+
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding: 1.5vh 0;
+    height: 9vh;
+}
+
+header img:hover {
+	height: 10vh;
+}
+
+nav {
+	position: absolute;
+	bottom: -1em;
+	width: 100%;
+	height: auto;
+	
+	background-color: #1C1C1C;
+    color: #E5E5E5;
+	
+    font-size: 1.25em;
+    font-family: 'Dubai', 'Hind Siliguri', sans-serif;
+    font-weight: 300;
+	
+	text-align: center;
+}
+
+nav div {
+	height: inherit;
+	
+	display: inline-block;
+	margin: 0 auto;
+    padding: 0;
+}
+
+nav a {
+	height: inherit;
+	background-color: #1C1C1C;
+    text-align: center;
+    color: #E5E5E5;
+    text-decoration: none;
+    padding: 0 1vmax;
+	width: 10vmax;
+}
+
+nav a:hover {
+    background-color: #E5E5E5;
+    color: #3f3f3f;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav-offset {
+	height: 15vh;
+}
+
+section div.background {
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	overflow: auto;
+	white-space: nowrap;
+	
+	position: relative;
+	background-color: #fcfcfc;
+	background-image: url("Assets/Hex Overlay.png");
+	background-repeat: repeat;
+	background-position: 50% 0%;
+	border-bottom: 1vh #1C1C1C solid;
+}
+
+#hexProfile {
+	position: absolute;
+	height: inherit;
+	left: 50%;
+	margin-left: -181px;
+}
+
+.name {
+	transition: 0.2s cubic-bezier(1, -1, 0, 2);
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	height: 25vh;
+	z-index: 1;
+	background-image: url("Assets/Nemo Banner Condensed.png");
+	background-size: 45.77455vh;
+	background-repeat: no-repeat;
+	width: 45.77455vh;
+	margin-right: -22.887275vh;
+}
+
+.name:hover {
+	top: 47.5%;
+}
+
+div.paragraph {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	
+	color: #E5E5E5;
+	font-size: 1.8vh;
+    font-family: 'Dubai', 'Hind Siliguri', sans-serif;
+    font-weight: 300;
+}
+
+.thumb {
+	display:inline-block;
+	background-repeat: no-repeat;
+}
+
+.thumb:hover {
+    cursor: pointer;
+}
+
+.big-thumb {
+	position: absolute;
+	top: 9.1vh;
+	left: 50%;
+	margin-left: -30vh;
+}
+
+.small-thumb {
+	position: absolute;
+	top: 26.1vh;
+	left: 50%;
+	margin-left: -6.75vh;
+}
+
+.big-thumb .thumb {
+	height: 30.569708vh;
+	width: 60vh;
+	background-size: 60vh;
+}
+
+.small-thumb .thumb {
+	height: 13.635479vh;
+	width: 13.5vh;
+	background-size: 13.5vh;
+}
+
+.dd-thumb {
+	background-image: url("Assets/Hex Game Thumbnails/HexThumb DD.png");
+	position: absolute;
+	top: 0vh;
+	left: -6.7vh; 
+}
+
+.dd-thumb:hover {
+	background-image: url("Assets/Hex Game Thumbnails/HexThumb DD-Highlight.png");
+}
+
+.cw-thumb {
+	background-image: url("Assets/Hex Game Thumbnails/HexThumb CW.png");
+	position: absolute;
+	top: 28.3vh;
+	left: -3.3vh; 
+}
+
+.cw-thumb:hover {
+	background-image: url("Assets/Hex Game Thumbnails/HexThumb CW-Highlight.png");
+}
+
+.writing-thumb {
+	background-image: url("Assets/Hex Game Thumbnails/HexThumb Writing.png");
+	position: absolute;
+	top: 0vh; 
+	left: 23.5vh;
+}
+
+.writing-thumb:hover {
+	background-image: url("Assets/Hex Game Thumbnails/HexThumb Writing-Highlight.png");
+}
+
+.github-thumb {
+	background-image: url("Assets/Hex Game Thumbnails/HexThumb GitHub.png");
+	position: absolute;
+	top: 11.3vh; 
+	left: 26.8vh;	
+}
+
+.github-thumb:hover {
+	background-image: url("Assets/Hex Game Thumbnails/HexThumb GitHub-Highlight.png");
+}
+
+footer {
+	text-align: center;
+}
+
+ul.socials {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	display: inline-block;
+}
+
+.fab, .fas {
+	margin: 0;
+	padding: 0.75em;
+	font-size: 1.25em;
+	text-align: center;
+	font-family: 'Hind Siliguri', sans-serif;
+	text-decoration: none;
+	clip-path: polygon(50% 100%, 6.75% 75%, 6.75% 25%, 50% 0%, 93.75% 25%, 93.75% 75%);
+}
+
+.fa-at {
+  background: #3F3F3F;
+  color: #AAAAAA;
+}
+
+.fa-twitter {
+  background: #3F3F3F;
+  color: #55ACEE;
+}
+
+.fa-itch-io {
+  background: #3F3F3F;
+  color: #FA5C5C;
+}
+
+.fa-at:hover {
+  color: #3F3F3F;
+  background: #AAAAAA;
+}
+
+.fa-twitter:hover {
+  color: #3F3F3F;
+  background: #55ACEE;
+}
+
+.fa-itch-io:hover {
+  color: #3F3F3F;
+  background: #FA5C5C;
+}
+
+.mobile-hide {
+	visibility: hidden;
+}
+
+/* Desktop */
+@media (min-width: 800px) 
+{		
+	.name {
+		background-size: 45.77455vh;
+		
+		top: 32px;
+		right: 32px;
+		height: 25vh;
+		width: 45.77455vh;	
+		margin-right: 0vh;
+	}
+
+	.name:hover {
+		top: 48px;
+	}
+	
+	section div.background {
+		background-position: 0% 0%;	
+	}
+
+	#hexProfile {
+		position: relative;
+		left: 0%;
+		margin-left: 0px;
+	}
+
+	header img {
+		padding: 1vh 0;
+		height: 10vh;
+	}
+	
+	header img:hover {
+		height: 10.5vh;
+	}
+	
+	.fab, .fas {
+		padding: 0.875em;
+		font-size: 1.375em;
+	}
+	
+	.big-thumb {
+		left: 0vh;
+		margin-left: 0;
+	}
+
+	.small-thumb {
+		left: 53.333333vh;
+		margin-left: 0;
+	}
+	
+	.dd-thumb {
+		left: 0;
+	}
+	
+	.cw-thumb {
+		left: 3.4vh; 
+	}
+	
+	.writing-thumb {
+		left: 0;
+	}
+	
+	.github-thumb {
+		left: 3.3vh;	
+	}
+	
+	.mobile-hide {
+		visibility: visible;
+	}
+}
+
+
+@media (min-width: 1200px) 
+{
+	.name {
+		background-size: 65vh;
+
+		top: 32px;
+		right: 16px;
+		height: 35.5vh;
+		width: 65vh;
+	}
+	
+	.fab, .fas {
+		padding: 1em;
+		font-size: 1.5em;
+	}
+}
