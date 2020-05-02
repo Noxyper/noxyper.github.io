@@ -99,8 +99,9 @@ section div.background {
 #hexProfile {
 	position: absolute;
 	height: inherit;
+	width: inherit;
 	left: 50%;
-	margin-left: -181px;
+	margin-left: -300px;
 }
 
 .name {

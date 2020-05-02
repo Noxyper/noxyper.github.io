@@ -34,8 +34,9 @@
 				<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js'></script>
 				<script type='text/javascript'>
 					var images=['Phone.png', 'Squat.png', 'Dumb.png'];
+					var chosenImage = '\"Assets/Hex Profiles/HexProfile ' + images[Math.floor(Math.random() * images.length)] + '\"';
 					
-					$('<img src="Assets/Hex Profiles/HexProfile ' + images[Math.floor(Math.random() * images.length)] + '" style="width: 30em;">').appendTo('#hexProfile');
+					$('<div style="background-size: 30em; background-repeat: no-repeat; height: inherit; width: 100%;">').css('background-image', 'url(' + chosenImage + ')').appendTo('#hexProfile');
 				</script>
 			</div>
 			<div class="paragraph">
