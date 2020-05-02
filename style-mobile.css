@@ -76,6 +76,11 @@ nav a:hover {
 	height: 15vh;
 }
 
+.background.projects {
+	background-size: 40vh; 
+	height: 72vh;
+}
+
 section div.background {
 	width: 100%;
 	padding: 0;
@@ -151,22 +156,22 @@ div.paragraph {
 }
 
 .big-thumb .thumb {
-	height: 30.569708vh;
-	width: 60vh;
-	background-size: 60vh;
+	height: 20.379805vh;
+	width: 40vh;
+	background-size: 40vh;
 }
 
 .small-thumb .thumb {
-	height: 13.635479vh;
-	width: 13.5vh;
-	background-size: 13.5vh;
+	height: 9.090319vh;
+	width: 9vh;
+	background-size: 9vh;
 }
 
 .dd-thumb {
 	background-image: url("Assets/Hex Game Thumbnails/HexThumb DD.png");
 	position: absolute;
-	top: 0vh;
-	left: -6.7vh; 
+	top: 0.8vh;
+	left: 7.8vh; 
 }
 
 .dd-thumb:hover {
@@ -176,8 +181,8 @@ div.paragraph {
 .cw-thumb {
 	background-image: url("Assets/Hex Game Thumbnails/HexThumb CW.png");
 	position: absolute;
-	top: 28.3vh;
-	left: -3.3vh; 
+	top: 19.6vh;
+	left: 5.7vh; 
 }
 
 .cw-thumb:hover {
@@ -187,8 +192,8 @@ div.paragraph {
 .writing-thumb {
 	background-image: url("Assets/Hex Game Thumbnails/HexThumb Writing.png");
 	position: absolute;
-	top: 0vh; 
-	left: 23.5vh;
+	top: -5vh; 
+	left: 20.1vh;
 }
 
 .writing-thumb:hover {
@@ -198,8 +203,8 @@ div.paragraph {
 .github-thumb {
 	background-image: url("Assets/Hex Game Thumbnails/HexThumb GitHub.png");
 	position: absolute;
-	top: 11.3vh; 
-	left: 26.8vh;	
+	top: 2.5vh; 
+	left: 17.90vh;	
 }
 
 .github-thumb:hover {
@@ -215,6 +220,7 @@ ul.socials {
 	margin-left: auto;
 	margin-right: auto;
 	display: inline-block;
+	padding: 0;
 }
 
 .fab, .fas {
@@ -278,6 +284,10 @@ ul.socials {
 		top: 48px;
 	}
 	
+	.background.projects {
+		background-size: 60vh; 
+	}
+	
 	section div.background {
 		background-position: 0% 0%;	
 	}
@@ -302,6 +312,18 @@ ul.socials {
 		font-size: 1.375em;
 	}
 	
+	.big-thumb .thumb {
+		height: 30.569708vh;
+		width: 60vh;
+		background-size: 60vh;
+	}
+
+	.small-thumb .thumb {
+		height: 13.635479vh;
+		width: 13.5vh;
+		background-size: 13.5vh;
+	}
+
 	.big-thumb {
 		left: 0vh;
 		margin-left: 0;
@@ -313,18 +335,22 @@ ul.socials {
 	}
 	
 	.dd-thumb {
+		top: 0;
 		left: 0;
 	}
 	
 	.cw-thumb {
+		top: 28.3vh;
 		left: 3.4vh; 
 	}
 	
 	.writing-thumb {
+		top: 0;
 		left: 0;
 	}
 	
 	.github-thumb {
+		top: 11.3vh;
 		left: 3.3vh;	
 	}
 	
