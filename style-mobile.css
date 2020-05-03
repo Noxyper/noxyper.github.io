@@ -363,7 +363,7 @@ ul.socials {
 		position: fixed;
 		background-size: 45.77455vh;
 		
-		top: 5vh;
+		top: 20vh;
 		right: 5vh;
 		height: 25vh;
 		width: 45.77455vh;	
@@ -371,7 +371,7 @@ ul.socials {
 	}
 
 	.name:hover {
-		top: 10vh;
+		top: 22.5vh;
 	}
 	
 	.background.projects {
@@ -456,7 +456,7 @@ ul.socials {
 	.name {
 		background-size: 65vh;
 
-		top: 5vh;
+		top: 20vh;
 		right: 5vh;
 		height: 35.5vh;
 		width: 65vh;
