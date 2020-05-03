@@ -23,12 +23,12 @@ header img {
     margin-left: auto;
     margin-right: auto;
 
-    padding: 1.5vh 0;
-    height: 9vh;
+    padding: 2.5vh 0;
+    height: 7vh;
 }
 
 header img:hover {
-	height: 10vh;
+	height: 8vh;
 }
 
 nav {
@@ -272,17 +272,18 @@ ul.socials {
 @media (min-width: 800px) 
 {		
 	.name {
+		position: fixed;
 		background-size: 45.77455vh;
 		
-		top: 32px;
-		right: 32px;
+		top: 20vh;
+		right: 5vh;
 		height: 25vh;
 		width: 45.77455vh;	
 		margin-right: 0vh;
 	}
 
 	.name:hover {
-		top: 48px;
+		top: 22.5vh;
 	}
 	
 	.background.projects {
@@ -367,8 +368,8 @@ ul.socials {
 	.name {
 		background-size: 65vh;
 
-		top: 32px;
-		right: 16px;
+		top: 20vh;
+		right: 5vh;
 		height: 35.5vh;
 		width: 65vh;
 	}
