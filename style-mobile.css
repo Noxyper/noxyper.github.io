@@ -96,6 +96,10 @@ section div.background {
 	border-bottom: 1vh #1C1C1C solid;
 }
 
+div.blog-container img {
+	max-width: 100%
+}
+
 .blog-container {
 	display: inline-block;
 	background-color: rgba(245, 245, 245, 0.8);
