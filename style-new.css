@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     width: 100%;
@@ -85,7 +89,7 @@ section > .backdrop {
 	transition: 0.2s ease-in-out;
 
 	width: 50%;
-	height: 50vh;
+	height: 25vw;
 	margin: 0 -8.33vw;
 	display: inline-block;
 	position: relative;
@@ -108,6 +112,7 @@ section > .backdrop h1 {
 		
 	text-align: center;
 	font-size: 10em;
+	font-size: 6.25vw;
     font-family: 'Work Sans', sans-serif;
 	font-weight: 600;
 	color: #424242;
@@ -143,7 +148,6 @@ section > .backdrop:hover h1.on-hover {
 
 .writing-bd.backdrop {
 	background-color: #eda900;
-	margin-left: -8vw;
 	
 	clip-path: polygon(0% 0%, 100% 0%, 83.33% 100%, 8.33% 100%);
 }
@@ -179,7 +183,8 @@ section > .backdrop:hover h1.on-hover {
 /*Gallery*/
 section.galleries {
 	width: 100%;
-	position:relative;
+	height: 36vw;
+	position: relative;
 }
 
 section .gallery {
@@ -211,18 +216,10 @@ section .games-ga.gallery {
 	left: 66vw;
 }
 
-section .writing-ga.gallery, section .code-ga.gallery {
-	margin-right: 1.166vw;
-}
-
-section .games-ga.gallery, section .code-ga.gallery {
-	margin-left: 1.166vw;
-}
-
 .gallery-card {
 	position: relative;
 	margin: 1vw;
-	background-color: rgba(189, 189, 189, 0.6);
+	background-color: rgba(189, 189, 189, 1);
 	
 	height: 10vw;
 	width: inherit;
@@ -240,49 +237,156 @@ section .games-ga.gallery, section .code-ga.gallery {
 	height: 100%;
 	width: 0.5vw;
 	right: 1.5vw;
+	opacity: 0.6;
 }
 
-.gac-title {
+.gac-text {
 	position: absolute;
 	left: 10vw;
 	top: 0.6vw;
-	width: 58%;
-	
+	right: 2.5vw;
+	height: 8.8vw;
+}
+
+.gac-title {
+	position: relative;
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	
 	margin: 0;
 	
-	font-size: 3vh;
+	font-size: 2.4em;
+	font-size: 1.5vw;
 	font-family: 'Work Sans', sans-serif;
     font-weight: 600;
 }
 
 .gac-desc {
-	position: absolute;
-	width: 58%;
-	height: 6.4vw;
-	left: 10vw;
-	top: 3vw;
-
+	height: 7.3vw;
+	position: relative;
 	margin: 0;
 	white-space: normal;
-	font-size: 0.9em;
+	font-size: 0.83em;
+	font-size: 0.52vw;
 	font-family: 'Work Sans', sans-serif;
 	font-weight: 300;
+	overflow: hidden;
+}
+
+.gac-desc:after {
+	content: "";
+	text-align: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 1vw;
+	background: linear-gradient(rgba(189, 189, 189, 0), rgba(189, 189, 189, 1) 50%);
 }
 
 .writing-gac-band {
-	background-color: rgba(237, 169, 0, 0.6);
+	background-color: rgb(237, 169, 0);
 }
 
 .code-gac-band {
-	background-color: rgba(0, 110, 219, 0.6);
+	background-color: rgb(0, 110, 219);
 }
 
 .games-gac-band {
-	background-color: rgba(199, 0, 0, 0.6);
+	background-color: rgb(199, 0, 0);
+}
+
+/*About Me*/
+section#about-me {
+	overflow-x: hidden;
+	position:relative;
+	height: 100vh;
+}
+
+section#about-me img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	object-fit: cover;
+	z-index: -1;
+}
+
+section#about-me img.am-front {
+	visibility: hidden;
+	z-index: 10;
+}
+
+section#about-me div.am-info {
+	transition: 0.2s ease-in-out;
+	
+	position: absolute;
+	top: 16%;
+	left: 10%;
+	width: 50%;
+	padding: 1%;
+}
+
+section#about-me h1 {
+	transition: 0.2s ease-in-out;
+
+	margin: 0 auto;
+	text-align: center;
+	
+	position: relative;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 300;
+	font-size: 2.88em;
+	/*font-size: 1.8vw;*/
+}
+
+section#about-me .am-name {
+	transition: 0.2s ease-in-out;
+	
+	font-weight: 600;
+	
+	font-size: 8em;
+	/*font-size: 5vw;*/
+}
+
+section#about-me div.am-text {
+	transition: 0.2s ease-in-out;
+	
+	position: absolute;
+	bottom: 20%;
+	left: 10%;
+	width: 50%;
+	
+	padding: 1%;
+	border-radius: 0.8vh;
+	background-color: rgba(66, 66, 66, 0.6);
+}
+
+section#about-me p {
+	transition: 0.2s ease-in-out;
+
+	margin: 0 auto;
+	text-align: center;
+	
+	color: #bdbdbd;
+	position: relative;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 300;
+	font-size: 1.28em;
+	/*font-size: 0.8vw;*/
+}
+
+.fadeIn {
+	-webkit-animation: animat_show 0.8s;
+	animation: animat_show 0.8s;
+	visibility: visible !important;
+}
+
+@-webkit-keyframes animat_show{
+	0%{opacity:0}
+	100%{opacity:1}
 }
 
 /*Footer/Socials*/
@@ -290,23 +394,26 @@ footer {
 	position: fixed;
 	bottom: 0;
 	text-align: center;
+	z-index: 10;
 }
 
 ul.socials {
 	width: 100%;	
 	display: inline-block;
 	padding: 0;
-	margin: 1em;
+	margin: 1vw;
+	z-index: 10;
 }
 
 .fab, .fas {
-	margin: 0 -0.5em;
-	padding: .75em;
-	font-size: 2em;
+	margin: 0 -0.75vw;
+	padding: 1vw;
+	font-size: 1.5vw;
 	text-align: center;
 	font-family: 'Hind Siliguri', sans-serif;
 	text-decoration: none;
 	clip-path: polygon(33.33% 0%, 100% 0%, 66.66% 100%, 0% 100%);
+	z-index: 10;
 }
 
 .fa-at {
@@ -355,4 +462,94 @@ ul.socials {
 	transition: 0.2s ease-in-out;
 	color: #bdbdbd;
 	background: #7289DA;
+}
+
+@media screen and (max-aspect-ratio: 3/2), (max-width: 800px) {
+	section#about-me div.am-info {
+		left: 0%;
+		width: 100%;
+	}
+
+	section#about-me div.am-text {
+		left: 24%;
+	}
+	
+	section#about-me img.am-front {
+		z-index: -1;
+	}
+}
+
+@media screen and (orientation: portrait), (max-width: 800px) {
+	/*Gallery*/
+	section.galleries {
+		width: 100%;
+		height: 88.5vw;
+		position: relative;
+	}
+	
+	.gac-text {
+		height: 26.3vw;
+		left: 27.5vw;
+	}
+	
+	.gac-title {
+		font-size:5vw;
+	}
+	
+	.gac-desc {
+		height: 20.4vw;
+		font-size:2vw;
+	}
+	
+	.gac-desc, .gac-title {
+		visibility: hidden;
+	}
+	
+	.gac-enable .gac-text .gac-desc, .gac-enable .gac-text .gac-title {
+		visibility: initial;
+	}
+	
+	.gac-band {
+		opacity: 1;
+		width: 2.5vw;
+		right: 0vw;
+	}
+	
+	.gallery-card {
+		height: 27.5vw;
+	}
+	
+	.gac-image {
+		position: absolute;
+		height: 26.3vw;
+		top: 0.6vw;
+		left: 0.6vw;
+	}
+	
+	/*About Me*/
+	section#about-me div.am-text {
+		left: 0%;
+		width: 100%;
+		
+		border-radius: 0vh;
+	}
+
+	section#about-me h1 {
+		font-size: 2.88vmax;
+	}
+
+	section#about-me .am-name {
+		font-size: 8vmax;
+	}
+	
+	section#about-me p {
+		font-size: 1.28vmax;
+	}
+	
+	/*Socials*/
+	.fab, .fas {
+		margin: 0 -2.25vmax;
+		padding: 2.5vmax 3.5vmax;
+		font-size: 3.5vmax;
+	}
 }
