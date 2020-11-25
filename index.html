@@ -6,52 +6,206 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         
 		<link rel="icon" type="image/png" href="Assets/WhiskeyIcon.png">
-        <link rel="stylesheet" type="text/css" href="style-mobile.css" />
-        <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri:300,400,600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style-new.css" />
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,600&display=swap" rel="stylesheet">
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 		<script src="https://kit.fontawesome.com/14b0c5612d.js" crossorigin="anonymous"></script>
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js'></script>
 
-        <title>Naomi Wirén</title>
+        <title>Naomi Wirén - Portfolio</title>
 	</head>
 	<body>
 		<header>
-			<img src="Assets/Nemo Banner.png" class="logo">
             <nav>
 				<div>
-					<a href="https://naomiwiren.com/">About Me</a>
-					<a href="https://naomiwiren.com/projects">Projects</a>
+					<a href="#about-me">About Me</a>
+					<a href="#projects">Projects</a>
 					<a href="https://naomiwiren.com/blog">Blog</a>
 					<a href="Files/CV.pdf" target="_blank">CV</a>
 				</div>
+				<script type='text/javascript'>
+					var sourceSwap = function () {
+						var $this = $(this);
+						var newSource = $this.data('alt-src');
+						
+						$this.data('alt-src', $this.attr('src'));
+						$this.attr('src', newSource);
+						$this.fadeIn();
+					}
+
+					$(function () {
+						$('img.logo').hover(sourceSwap, sourceSwap);
+					});
+				</script>
+				<a href="https://naomiwiren.com/">
+					<img data-alt-src="Assets/BannerWHITE.png" src="Assets/BannerGREY.png" class="logo">
+				</a>
             </nav>
 		</header>
-		<div class="nav-offset"></div>
-		<section id="about-me">
-			<div class="background" style="background-size: 22.5em; height: 58vh;">
-				<div id="hexProfile">
-				</div>
-				<div class="name"></div>
-
-				<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js'></script>
-				<script type='text/javascript'>
-					var images=['Phone.png', 'Squat.png', 'Dumb.png'];
-					var chosenImage = '\"Assets/Hex Profiles/HexProfile ' + images[Math.floor(Math.random() * images.length)] + '\"';
+		<section class="backdrops" id="projects">
+			<script type='text/javascript'>
+				var fillScreen = function (event) {
+					var $this = $(this);
+					var neighbours = [event.data.param1, event.data.param2];
 					
-					$('<div style="background-size: 30em; background-repeat: no-repeat; height: inherit; width: 100%;">').css('background-image', 'url(' + chosenImage + ')').appendTo('#hexProfile');
-				</script>
+					$this.css({"transition": "0.5s ease-in-out", "width": "95%", "margin": "0", "clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"});
+					$this.find("div").css({"clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"});
+					$this.find("h1").css("visibility", "visible");
+					
+					$this.find("h1").removeClass("on-hover");
+					
+					neighbours[0].css({"transition": "0.6s ease-in-out","width": "2.5%", "margin": "0", "clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"});
+					neighbours[0].find("div").css({"clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"});
+					neighbours[0].find("h1").css("visibility", "hidden");
+					neighbours[0].find("h1").addClass("on-hover");
+					
+					neighbours[1].css({"transition": "0.6s ease-in-out","width": "2.5%", "margin": "0", "clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"});
+					neighbours[1].find("div").css({"clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"});
+					neighbours[1].find("h1").css("visibility", "hidden");
+					neighbours[1].find("h1").addClass("on-hover");
+				}
+				
+				var hideGallery = function (event) {
+					var me = event.data.param1;
+					var neighbours = [event.data.param2, event.data.param3];
+					
+					me.css({"transition": "0.5s ease-in-out", "left": "0%", "width": "98%", "margin": "0 1.166vw", "opacity": "1", "z-index": "0"}).delay(500).promise().done(function(){
+						me.find(".gallery-card").css({"width": "100%", "margin": "1vw 0"});
+						me.find(".gallery-card").find(".gac-title").css({"width": "87%"});
+						me.find(".gallery-card").find(".gac-desc").css({"width": "87%"});
+					});
+					
+					neighbours[0].css({"transition": "opacity 0.5s ease-in-out", "opacity": "0"}).delay(500).promise().done(function(){
+						neighbours[0].css({"width": "0%", "margin": "0", "left": "0%", "z-index": "-1"});
+					});
+					
+					neighbours[1].css({"transition": "opacity 0.5s ease-in-out", "opacity": "0"}).delay(500).promise().done(function(){
+						neighbours[1].css({"width": "0%", "margin": "0", "left": "0%", "z-index": "-1"});
+					})
+				}
+				
+				$(function () {
+					$('div.writing-bd.backdrop').click(
+					{
+					param1: $('div.code-bd.backdrop'), 
+					param2: $('div.games-bd.backdrop'), 
+					}, fillScreen);
+					$('div.writing-bd.backdrop').click(
+					{
+					param1: $('div.writing-ga.gallery'),
+					param2: $('div.games-ga.gallery'), 
+					param3: $('div.code-ga.gallery')
+					}, hideGallery);
+				});
+				
+				$(function () {
+					$('div.code-bd.backdrop').click(
+					{
+					param1: $('div.writing-bd.backdrop'), 
+					param2: $('div.games-bd.backdrop')
+					}, fillScreen);
+					$('div.code-bd.backdrop').click(
+					{
+					param1: $('div.code-ga.gallery'),
+					param2: $('div.writing-ga.gallery'), 
+					param3: $('div.games-ga.gallery')
+					}, hideGallery);
+				});
+				
+				$(function () {
+					$('div.games-bd.backdrop').click(
+					{
+					param1: $('div.writing-bd.backdrop'), 
+					param2: $('div.code-bd.backdrop')
+					}, fillScreen);
+					$('div.games-bd.backdrop').click(
+					{
+					param1: $('div.games-ga.gallery'),
+					param2: $('div.writing-ga.gallery'), 
+					param3: $('div.code-ga.gallery')
+					}, hideGallery);
+				});
+			</script>
+			
+			<div class="writing-bd backdrop">
+				<div class="writing-bd pattern"></div>
+				<h1 class="on-hover">Stories</h1>
+			</div><!--
+			--><div class="code-bd backdrop">
+				<div class="code-bd pattern"></div>
+				<h1 class="on-hover">Code</h1>
+			</div><!--
+			--><div class="games-bd backdrop">
+				<div class="games-bd pattern"></div>
+				<h1 class="on-hover">Games</h1>
 			</div>
-			<div class="paragraph">
-				<div style="display:inline-block; width: 100%; background-color: #1C1C1C; opacity: 0.8; z-index: -1;">
-					<p style="width: 75%; margin-left: 12.5%;">My name is Naomi, I'm a Level 4 University of Portsmouth student studying Computer Games Technology. My passion is for games programming mainly, spanning everything from systems for gameplay to tools and streamlining processes, but any part of development intrigues me from design to graphics. I have been developing games personally since 2016, all varying in scope and size.<br>I am a massive movie buff, I like to both write and cook, and when I find the time for it I like to sit down and play or replay a story-heavy game.</p>
-				</div>
-			</div>
-			<footer>
-				<ul class="socials">
-					<a href="mailto: business@naomiwiren.com" target="_blank" class="fas fa-at"></a>
-					<a href="https://www.twitter.com/NaomiWiren" target="_blank" class="fab fa-twitter"></a>
-					<a href="https://noxyper.itch.io/" target="_blank" class="fab fa-itch-io"></a>
-				</ul>
-			</footer>
         </section>
+		<section class="galleries">		
+			<div class="writing-ga gallery">
+				<a href="https://www.reddit.com/r/NoxieWrites/comments/j3x71m/new_serial_where_the_lighthouse_shines/">
+					<div class="writing-gac gallery-card">
+						<img src="Assets/MissingImage.jpg" class="gac-image">
+						<div class="writing-gac-band gac-band"></div>
+						<h1 class="gac-title">Where the Lighthouse Shines</h1>
+						<p class="gac-desc">A serial I'm working on. Young Adult-style adventure story about a young patriotic man who has a calling in life that he cannot currently achieve. With conflict brewing on the horizon, his life will rapidly change as the familiarity and comfort of his homeland slowly, but surely gets dismantled in front of his eyes.</p>
+					</div>
+				</a>
+			</div><!--
+			--><div class="code-ga gallery">
+				<a href="https://github.com/Noxyper/tic-tac-chat">
+					<div class="code-gac gallery-card">
+						<img src="Assets/MissingImage.jpg" class="gac-image">
+						<div class="code-gac-band gac-band"></div>
+						<h1 class="gac-title">Tic Tac Chat</h1>
+						<p class="gac-desc">A game created using the ASP.Net API. Built using standard Windows libraries such as WPF and ASP.Net, this Tic Tac Toe game has a built-in chat system to allow for communication between players. The project was created as part of the Computer Games Technology course at the University of Portsmouth</p>
+					</div>
+				</a>
+				<a href="https://github.com/Noxyper/noxyper.github.io">
+					<div class="code-gac gallery-card">
+						<img src="Assets/MissingImage.jpg" class="gac-image">
+						<div class="code-gac-band gac-band"></div>
+						<h1 class="gac-title">Portfolio</h1>
+						<p class="gac-desc">This portfolio was written by myself and hosted on Github.</p>
+					</div>
+				</a>
+			</div><!--
+			--><div class="games-ga gallery">
+				<a href="http://noxyper.itch.io/delivery-demolition">
+					<div class="games-gac gallery-card">
+						<img src="Assets/GameThumbnails/DeliveryDemolitionThumb.png" class="gac-image">
+						<div class="games-gac-band gac-band"></div>
+						<h1 class="gac-title">Delivery Demolition</h1>
+						<p class="gac-desc">Ever wondered why your packages never arrive in one piece?<br><br>The Northern Post Demolition Co. makes a profit destroying your packages so the postmen don't have to! You're newly employed at their local factory, and it's your mission to demolish as many boxes as possible.<br><br>The game can be played exclusively with a mouse, as the goal of this game was to have a single control (in this game's case that would be click-and-drag).</p>
+					</div>
+				</a>
+				<a href="https://daniel-kershaw.itch.io/rockhampton">
+					<div class="games-gac gallery-card">
+						<img src="Assets/GameThumbnails/RockhamptonThumb.png" class="gac-image">
+						<div class="games-gac-band gac-band"></div>
+						<h1 class="gac-title">Rockhampton: A Microbial Mystery</h1>
+						<p class="gac-desc">In the abandoned village of Bockhampton, a young professor McRoe has heard rumours of a microbe that can supposedly rapidly multiply to create structures. Using her knowledge of microbe abilities, as well as the tools to turbo boost these abilities, will she find what she's looking for?<br>This game is a point-and-click game. Find materials from your surroundings, then take and refine these materials to create powerful microbes. Use these microbes to complete tasks and solve puzzles. This game was made for the University of Portsmouth Game Jam 2020</p>
+					</div>
+				</a>
+				<a href="http://noxyper.itch.io/">
+					<div class="games-gac gallery-card">
+						<img src="Assets/GameThumbnails/CaribbeanWatersThumb.png" class="gac-image">
+						<div class="games-gac-band gac-band"></div>
+						<h1 class="gac-title">Caribbean Waters</h1>
+						<p class="gac-desc">Raise the sails, man the port-side cannon, and get ready for an adventure!<br><br>Caribbean Waters is a multiplayer party game where you, together with three friends, try to hold a ship together on the open ocean blue. You and your crew can act as ferocious pirates and attack any ship that lines your sight, or maybe you are more of the business crew, who sell cargo wherever you may go in an attempt to become the richest men in all of the Caribbean.</p>
+					</div>
+				</a>
+			</div>
+		</section>
+		<section id="about-me">
+			
+		</section>
+		<footer>
+			<ul class="socials">
+				<a href="mailto: business@naomiwiren.com" target="_blank" class="fas fa-at"></a>
+				<a href="https://www.discord.gg/ChD4yVD" target="_blank" class="fab fa-discord"></a>
+				<a href="https://www.twitter.com/NaomiWiren" target="_blank" class="fab fa-twitter"></a>
+				<a href="https://noxyper.itch.io/" target="_blank" class="fab fa-itch-io"></a>
+			</ul>
+		</footer>
 	</body>
 </html>

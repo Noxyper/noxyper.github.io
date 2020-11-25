@@ -1,0 +1,358 @@
+body {
+    margin: 0;
+    width: 100%;
+	background-color: #e1e1e1;
+}
+
+/*Navigation*/
+
+header {
+	height: auto;
+    position: sticky;
+	padding: 2vh 0;
+    width: 100%;
+    z-index: 2;
+	background-color: #bdbdbd;
+}
+
+header img {
+	transition: 0.2s ease-in-out;
+	display: inline-block;
+
+	height: 7.6vh;
+    padding: 0.46vh 1vh;
+	border-radius: 0.8vh;
+}
+
+header img:hover {
+    background-color: #424242;
+}
+
+nav {
+	width: auto;
+	height: inherit;
+	display: block;
+
+    color: #424242;
+	
+    font-size: 1.8vh;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+	
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+nav div {
+	border-right: 0.25em solid #424242;
+	padding-right: 1vmin;
+	display: inline-block;
+	width: auto;
+	height: auto;
+}
+
+nav div a {
+	transition: 0.2s ease-in-out;
+	    
+	text-align: right;
+    color: #424242;
+    text-decoration: none;
+    
+	display: block;
+	border-radius: 0.8vh;
+	padding: 0 0.5em;
+	margin: 0.2vh 0;
+	width: auto;
+}
+
+nav div a:hover {
+    background-color: #424242;
+    color: #e1e1e1;
+    cursor: pointer;
+}
+
+/*Backdrop*/
+section.backdrops {
+	display: inline-block;
+	width: 100%;
+	padding: 0;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+section > .backdrop {
+	transition: 0.2s ease-in-out;
+
+	width: 50%;
+	height: 50vh;
+	margin: 0 -8.33vw;
+	display: inline-block;
+	position: relative;
+
+	clip-path: polygon(25% 0%, 100% 0%, 83.33% 100%, 8.33% 100%);
+}
+
+section > .backdrop h1 {
+	transition: 0.2s ease-in-out;
+	
+	padding: 0;
+	margin: 0;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	
+	top: 50%;
+	left: 50%;
+	width: 100vw;
+	height: auto;
+		
+	text-align: center;
+	font-size: 10em;
+    font-family: 'Work Sans', sans-serif;
+	font-weight: 600;
+	color: #424242;
+}
+
+section > .backdrop h1:hover {
+    background-color: rgba(66, 66, 66, 0.6);
+    color: #e1e1e1;
+	cursor: pointer;
+}
+
+section > .backdrop:hover {
+    width: 55%;
+	cursor: pointer;
+}
+
+section > .backdrop:hover h1.on-hover {
+    left: 40%;
+}
+
+@keyframes animatedBackground {
+	from { background-position: 100% 0; }
+	to { background-position: 0 100%; }
+}
+
+.pattern {
+	width: 100%;
+	height: inherit;
+	
+	clip-path: polygon(25% 0%, 100% 0%, 83.33% 100%, 8.33% 100%);
+	animation: animatedBackground 40s linear infinite;
+}
+
+.writing-bd.backdrop {
+	background-color: #eda900;
+	margin-left: -8vw;
+	
+	clip-path: polygon(0% 0%, 100% 0%, 83.33% 100%, 8.33% 100%);
+}
+
+.writing-bd.pattern {
+	background-image: url("Assets/Graphics/PencilPattern.png");
+	background-size: 5em;
+	filter: invert(71%) sepia(63%) saturate(2886%) hue-rotate(4deg) brightness(96%) contrast(104%);
+	
+	clip-path: polygon(0% 0%, 100% 0%, 83.33% 100%, 8.33% 100%);
+}
+
+.code-bd.backdrop {
+	background-color: #006edb;
+}
+
+.code-bd.pattern {
+	background-image: url("Assets/Graphics/CodeBracketsPattern.png");
+	background-size: 5em;
+	filter: invert(22%) sepia(70%) saturate(3123%) hue-rotate(198deg) brightness(100%) contrast(101%);
+}
+
+.games-bd.backdrop {
+	background-color: #c70000;
+}
+
+.games-bd.pattern {
+	background-image: url("Assets/Graphics/ArcadeCabinetPattern.png");
+	background-size: 5em;
+	filter: invert(10%) sepia(96%) saturate(6190%) hue-rotate(360deg) brightness(79%) contrast(109%);
+}
+
+/*Gallery*/
+section.galleries {
+	width: 100%;
+	position:relative;
+}
+
+section .gallery {
+	transition: 0.2s ease-in-out;
+
+	width: 30vw;
+	height: auto;
+	margin: 1.166vw;
+	display: inline-block;
+	position: absolute;
+	top: 0%
+}
+
+section .gallery a {
+	width: inherit;
+	text-decoration: none;
+	color: #424242;
+}
+
+section .writing-ga.gallery {
+	left: 0vw;
+}
+
+section .code-ga.gallery {
+	left: 33vw;
+}
+
+section .games-ga.gallery {
+	left: 66vw;
+}
+
+section .writing-ga.gallery, section .code-ga.gallery {
+	margin-right: 1.166vw;
+}
+
+section .games-ga.gallery, section .code-ga.gallery {
+	margin-left: 1.166vw;
+}
+
+.gallery-card {
+	position: relative;
+	margin: 1vw;
+	background-color: rgba(189, 189, 189, 0.6);
+	
+	height: 10vw;
+	width: inherit;
+}
+
+.gac-image {
+	position: absolute;
+	height: 8.8vw;
+	top: 0.6vw;
+	left: 0.6vw;
+}
+
+.gac-band {
+	position: absolute;
+	height: 100%;
+	width: 0.5vw;
+	right: 1.5vw;
+}
+
+.gac-title {
+	position: absolute;
+	left: 10vw;
+	top: 0.6vw;
+	width: 58%;
+	
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	
+	margin: 0;
+	
+	font-size: 3vh;
+	font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+}
+
+.gac-desc {
+	position: absolute;
+	width: 58%;
+	height: 6.4vw;
+	left: 10vw;
+	top: 3vw;
+
+	margin: 0;
+	white-space: normal;
+	font-size: 0.9em;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 300;
+}
+
+.writing-gac-band {
+	background-color: rgba(237, 169, 0, 0.6);
+}
+
+.code-gac-band {
+	background-color: rgba(0, 110, 219, 0.6);
+}
+
+.games-gac-band {
+	background-color: rgba(199, 0, 0, 0.6);
+}
+
+/*Footer/Socials*/
+footer {
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+}
+
+ul.socials {
+	width: 100%;	
+	display: inline-block;
+	padding: 0;
+	margin: 1em;
+}
+
+.fab, .fas {
+	margin: 0 -0.5em;
+	padding: .75em;
+	font-size: 2em;
+	text-align: center;
+	font-family: 'Hind Siliguri', sans-serif;
+	text-decoration: none;
+	clip-path: polygon(33.33% 0%, 100% 0%, 66.66% 100%, 0% 100%);
+}
+
+.fa-at {
+	transition: 0.2s ease-in-out;
+	background: #bdbdbd;
+	color: #424242;
+}
+
+.fa-twitter {
+	transition: 0.2s ease-in-out;
+	background: #bdbdbd;
+	color: #55ACEE;
+}
+
+.fa-itch-io {
+	transition: 0.2s ease-in-out;
+	background: #bdbdbd;
+	color: #FA5C5C;
+}
+
+.fa-discord {
+	transition: 0.2s ease-in-out;
+	background: #bdbdbd;
+	color: #7289DA;
+}
+
+.fa-at:hover {
+	transition: 0.2s ease-in-out;
+	color: #bdbdbd;
+	background: #424242;
+}
+
+.fa-twitter:hover {
+  	transition: 0.2s ease-in-out;
+	color: #bdbdbd;
+	background: #55ACEE;
+}
+
+.fa-itch-io:hover {
+  	transition: 0.2s ease-in-out;
+	color: #bdbdbd;
+	background: #FA5C5C;
+}
+
+.fa-discord:hover {
+	transition: 0.2s ease-in-out;
+	color: #bdbdbd;
+	background: #7289DA;
+}
