@@ -146,13 +146,13 @@ section > .backdrop:hover h1.on-hover {
 	animation: animatedBackground 40s linear infinite;
 }
 
-.writing-bd.backdrop {
+.writing-bd.backdrop, .blog-info.blog-writing, .blog-indicator.blog-writing {
 	background-color: #eda900;
 	
 	clip-path: polygon(0% 0%, 100% 0%, 83.33% 100%, 8.33% 100%);
 }
 
-.writing-bd.pattern {
+.writing-bd.pattern, .blog-pattern.blog-writing {
 	background-image: url("Assets/Graphics/PencilPattern.png");
 	background-size: 5em;
 	filter: invert(71%) sepia(63%) saturate(2886%) hue-rotate(4deg) brightness(96%) contrast(104%);
@@ -160,21 +160,21 @@ section > .backdrop:hover h1.on-hover {
 	clip-path: polygon(0% 0%, 100% 0%, 83.33% 100%, 8.33% 100%);
 }
 
-.code-bd.backdrop {
+.code-bd.backdrop, .blog-info.blog-code, .blog-indicator.blog-code {
 	background-color: #006edb;
 }
 
-.code-bd.pattern {
+.code-bd.pattern, .blog-pattern.blog-code {
 	background-image: url("Assets/Graphics/CodeBracketsPattern.png");
 	background-size: 5em;
 	filter: invert(22%) sepia(70%) saturate(3123%) hue-rotate(198deg) brightness(100%) contrast(101%);
 }
 
-.games-bd.backdrop {
+.games-bd.backdrop, .blog-info.blog-game, .blog-indicator.blog-game {
 	background-color: #c70000;
 }
 
-.games-bd.pattern {
+.games-bd.pattern, .blog-pattern.blog-game {
 	background-image: url("Assets/Graphics/ArcadeCabinetPattern.png");
 	background-size: 5em;
 	filter: invert(10%) sepia(96%) saturate(6190%) hue-rotate(360deg) brightness(79%) contrast(109%);
@@ -384,9 +384,135 @@ section#about-me p {
 	visibility: visible !important;
 }
 
-@-webkit-keyframes animat_show{
+@-webkit-keyframes animat_show {
 	0%{opacity:0}
 	100%{opacity:1}
+}
+
+/*Blog*/
+section#blog-posts {
+	margin: 5vh 15vw;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 300;
+	background-color: rgba(189, 189, 189, 1);
+	color: #424242;
+	border-radius: 0.8vw;
+}
+
+.blog-post {
+	margin: 0;
+	position: relative;
+	height: auto;
+	padding: 2vh 2vw;
+}
+
+.blog-indicator {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	width: 10vw;
+}
+
+.blog-post:first-child > .blog-indicator, .blog-post:first-child > .blog-indicator > .blog-pattern {
+	border-top-right-radius: 0.8vw;
+}
+
+.blog-post:last-child > .blog-indicator, .blog-post:last-child > .blog-indicator > .blog-pattern  {
+	border-bottom-right-radius: 0.8vw;
+}
+
+.blog-excerpt-text {
+	width: 86%;
+	margin: 0;
+}
+
+.blog-excerpt > *{
+	font-size: 1em;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 300;
+	font-style: none;
+	position: relative;
+	margin: auto auto;
+	z-index: 10;
+}
+
+.blog-link {
+	text-decoration: none;
+}
+
+.blog-link p {
+	transition: 0.2s ease-in-out;
+		
+	font-size: 2em;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 600;
+	font-style: none;
+	margin: auto auto;
+	z-index: 10;
+	color: #424242;
+}
+
+.blog-link p:hover {
+	font-size: 2.1em;
+}
+
+div.blog-container {
+	margin: 5vh 15vw;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 300;
+	background-color: rgba(189, 189, 189, 1);
+	color: #424242;
+	border-radius: 0.8vw;
+}
+
+div.blog-container img {
+	width: 100%;
+	border-radius: 0.8vw;
+}
+
+div.blog-content {
+	padding: 0 5vw 5vh 5vw;
+}
+
+.blog-info {
+	background-color: red;
+	padding: 0;
+	border-top-left-radius: 0.8vw;
+	border-top-right-radius: 0.8vw;
+	text-align: center;
+	width: 100%;
+	height: 15vh;
+
+	display: inline-block;
+	position: relative;
+}
+
+.blog-info-text {
+	padding: 5vh 0;
+
+	text-align: center;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: inherit;
+}
+
+.blog-title, .blog-date {
+	position: relative;
+	margin: auto auto;
+	z-index: 10;
+	color: #bdbdbd;
+}
+
+.blog-pattern {
+	border-top-left-radius: 0.8vw;
+	border-top-right-radius: 0.8vw;
+	clip-path: none;
+	width: 100%;
+	height: 100%;
+	animation: animatedBackground 80s linear infinite;
 }
 
 /*Footer/Socials*/
