@@ -148,16 +148,20 @@ section > .backdrop:hover h1.on-hover {
 
 .writing-bd.backdrop, .blog-info.blog-writing, .blog-indicator.blog-writing {
 	background-color: #eda900;
-	
-	clip-path: polygon(0% 0%, 100% 0%, 83.33% 100%, 8.33% 100%);
+}
+
+.writing-bd.backdrop {
+	clip-path: polygon(0% 0%, 100% 0%, 83.33% 100%, 8.33% 100%);	
 }
 
 .writing-bd.pattern, .blog-pattern.blog-writing {
 	background-image: url("Assets/Graphics/PencilPattern.png");
 	background-size: 5em;
 	filter: invert(71%) sepia(63%) saturate(2886%) hue-rotate(4deg) brightness(96%) contrast(104%);
-	
-	clip-path: polygon(0% 0%, 100% 0%, 83.33% 100%, 8.33% 100%);
+}
+
+.writing-bd.pattern {
+	clip-path: polygon(0% 0%, 100% 0%, 83.33% 100%, 8.33% 100%);	
 }
 
 .code-bd.backdrop, .blog-info.blog-code, .blog-indicator.blog-code {
