@@ -426,12 +426,8 @@ section#blog-posts {
 	width: 10vw;
 }
 
-.blog-post > .blog-indicator, .blog-post > .blog-indicator > .blog-pattern {
+.blog-post:first-child > .blog-indicator, .blog-post > .blog-indicator > .blog-pattern {
 	border-top-right-radius: 0.8vw;
-}
-
-.blog-post ~ .blog-post > .blog-indicator, .blog-post ~ .blog-post > .blog-indicator > .blog-pattern {
-	border-top-right-radius: 0vw;
 }
 
 .blog-post:last-child > .blog-indicator, .blog-post:last-child > .blog-indicator > .blog-pattern  {
