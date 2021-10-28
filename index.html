@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="projects">
     <head>
 	    <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,15 +51,21 @@
 						backdrops[2].removeClass("bd-active");
 						
 						galleries[0].css({"transition": "0.5s ease-in-out", "left": "0vw", "width": "30vw", "margin": "1.166vw", "opacity": "1", "z-index": "0"});
-						galleries[0].find(".gallery-card").css({"width": "inherit", "margin": "1vw"});
+						galleries[0].find(".gallery-card").css({"width": "inherit", "margin": "1vw", "clip-path" : "polygon(0% 0%, 100% 0%, 98.5% 85%, 33.33% 100%, 0% 100%)"});
 						
 						galleries[1].css({"transition": "0.5s ease-in-out", "left": "33vw", "width": "30vw", "margin": "1.166vw", "opacity": "1", "z-index": "0"});
-						galleries[1].find(".gallery-card").css({"width": "inherit", "margin": "1vw"});
+						galleries[1].find(".gallery-card").css({"width": "inherit", "margin": "1vw", "clip-path" : "polygon(0% 0%, 100% 0%, 98.5% 85%, 33.33% 100%, 0% 100%)"});
 						
 						galleries[2].css({"transition": "0.5s ease-in-out", "left": "66vw", "width": "30vw", "margin": "1.166vw", "opacity": "1", "z-index": "0"});
-						galleries[2].find(".gallery-card").css({"width": "inherit", "margin": "1vw"});
+						galleries[2].find(".gallery-card").css({"width": "inherit", "margin": "1vw", "clip-path" : "polygon(0% 0%, 100% 0%, 98.5% 85%, 33.33% 100%, 0% 100%)"});
 						
-						$('section#about-me img.am-backdrop').css({"visibility": "initial"});
+						if((screen.width < 800 || screen.availHeight > screen.availWidth)) {
+							galleries[0].find(".gallery-card").css({"clip-path" : "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"});
+							galleries[1].find(".gallery-card").css({"clip-path" : "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"});
+							galleries[2].find(".gallery-card").css({"clip-path" : "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"});
+						}
+						
+						$('section#about-me img.am-backdrop').css({"opacity": "1"});
 						$('section#about-me div.am-delete').remove();
 					}
 					
@@ -86,11 +92,12 @@
 						neighbours[1].find("h1").addClass("on-hover");
 						neighbours[1].removeClass("bd-active");
 						
-						$('section#about-me img.am-backdrop').css({"visibility": "hidden"});
+						$('section#about-me img.am-backdrop').css({"opacity": "0.5"});
 						
 						$('section#about-me div.am-delete').remove();
-						$('section#about-me').prepend('<div class="' + $this.attr('class').split(/\s+/)[0] + ' ' + $this.attr('class').split(/\s+/)[1] + ' am-delete" style="transition: none; margin: 0; position: absolute; top: 0; left: 0; clip-path: none; width: 100vw; height: 100vh; z-index: -1;"><div style="clip-path: none;"></div></div>');
-						$('section#about-me div div').addClass($this.attr('class').split(/\s+/)[0] + " pattern");					
+						$('section#about-me').prepend('<div class="' + $this.attr('class').split(/\s+/)[0] + ' ' + $this.attr('class').split(/\s+/)[1] + ' am-delete" style="transition: none; margin: 0; position: absolute; top: 0; left: 0; clip-path: none; width: 100vw; height: 100vh; z-index: 0;"><div style="clip-path: none;"></div></div>');
+						$('section#about-me div div').addClass($this.attr('class').split(/\s+/)[0] + " pattern");
+						
 					}
 					
 					var hideGallery = function (param1, param2, param3) {
@@ -98,7 +105,7 @@
 						var neighbours = [param2, param3];
 						
 						me.css({"transition": "0.5s ease-in-out", "left": "0%", "width": "98%", "margin": "0 1.166vw", "opacity": "1", "z-index": "0"}).delay(500).promise().done(function(){
-							me.find(".gallery-card").css({"width": "100%", "margin": "1vw 0"});
+							me.find(".gallery-card").css({"width": "100%", "margin": "1vw 0", "clip-path" : "polygon(0% 0%, 100% 0%, 99.5% 85%, 11.11% 100%, 0% 100%)"});
 							me.find(".gallery-card").addClass("gac-enable");
 						});
 						
@@ -223,10 +230,10 @@
 				</a>
             </nav>
 		</header>
-		<section class="backdrops" id="projects">			
+		<section class="backdrops">			
 			<div class="writing-bd backdrop">
 				<div class="writing-bd pattern"></div>
-				<h1 class="on-hover">Stories</h1>
+				<h1 class="on-hover">Narrative</h1>
 			</div><!--
 			--><div class="code-bd backdrop">
 				<div class="code-bd pattern"></div>
@@ -239,13 +246,13 @@
         </section>
 		<section class="galleries">		
 			<div class="writing-ga gallery">
-				<a href="https://www.naomiwiren.com/blog/serial-chapter/where-the-lighthouse-shines-ch1">
+				<a href="Files/HaavsTalesOfScanzhi.pdf" target="_blank">
 					<div class="writing-gac gallery-card">
-						<img src="Assets/Thumbnails/LighthouseThumb.png" class="gac-image">
+						<img src="Assets/Thumbnails/HaavThumb.png" class="gac-image">
 						<div class="writing-gac-band gac-band"></div>
 						<div class="gac-text">
-							<h1 class="gac-title">Where the Lighthouse Shines</h1>
-							<p class="gac-desc">A serial I'm currently working on. Young Adult-style adventure story about a young patriotic man who has a calling in life that he cannot currently achieve. With conflict brewing on the horizon, his life will rapidly change as the familiarity and comfort of his homeland slowly, but surely gets dismantled in front of his eyes.</p>
+							<h1 class="gac-title">Haav's Tales of Scanzhi</h1>
+							<p class="gac-desc">A homebrew Dungeons and Dragons campaign I'm currently working on with custom races, backgrounds, and spells that are all written and developed by me. The campaign follows a religious cult and their goal of resurrecting old, forgotten gods. This project is currently under development and thusly will be updated on here occassionally.</p>
 						</div>
 					</div>
 				</a>
@@ -271,6 +278,36 @@
 						</div>
 					</div>
 				</a>
+				<a href="https://github.com/Noxyper/CustomUnityToolbox">
+					<div class="code-gac gallery-card">
+						<img src="Assets/Thumbnails/ToolboxThumb.png" class="gac-image">
+						<div class="code-gac-band gac-band"></div>
+						<div class="gac-text">
+							<h1 class="gac-title">Custom Unity Tools</h1>
+							<p class="gac-desc">Developed a custom Unity toolbox that makes use of translation, rotation, scale, shearing, and squash & stretch. The toolbox uses a custom transform component and is a tech demo that could theoretically be translated into a custom engine with ease.</p>
+						</div>
+					</div>
+				</a>
+				<a>
+					<div class="code-gac gallery-card">
+						<img src="Assets/Thumbnails/MaverickThumb.png" class="gac-image">
+						<div class="code-gac-band gac-band"></div>
+						<div class="gac-text">
+							<h1 class="gac-title">Maverick Aviation - Real-Time Interactive Group Project</h1>
+							<p class="gac-desc">A final-year group project developed in a team of 5. The project is still under development, and more of this project will be shown off by late March.</p>
+						</div>
+					</div>
+				</a>
+				<!--<a href="https://github.com/Noxyper/CubeSatVR"> No don't look at this, this project is in no state to show off yet :(
+					<div class="code-gac gallery-card">
+						<img src="Assets/Thumbnails/SPINThumb.png" class="gac-image">
+						<div class="code-gac-band gac-band"></div>
+						<div class="gac-text">
+							<h1 class="gac-title">CubeSat Prototyping Tool</h1>
+							<p class="gac-desc">In 8 weeks, I researched and developed a prototyping tool for developing CubeSats. The tool was developed as part of the Satellite Applications SPIN programme, and is to be distributed and used by engineers in prototyping and developing a satellite with a client.</p>
+						</div>
+					</div>
+				</a>-->
 				<a href="https://github.com/Noxyper/noxyper.github.io">
 					<div class="code-gac gallery-card">
 						<img src="Assets/Thumbnails/PortfolioThumb.png" class="gac-image">
@@ -299,7 +336,7 @@
 						<div class="games-gac-band gac-band"></div>
 						<div class="gac-text">
 							<h1 class="gac-title">Rockhampton: A Microbial Mystery</h1>
-							<p class="gac-desc">In the abandoned village of Bockhampton, a young professor McRoe has heard rumours of a microbe that can supposedly rapidly multiply to create structures. Using her knowledge of microbe abilities, as well as the tools to turbo boost these abilities, will she find what she's looking for?<br>This game is a point-and-click game. Find materials from your surroundings, then take and refine these materials to create powerful microbes. Use these microbes to complete tasks and solve puzzles. This game was made for the University of Portsmouth Game Jam 2020</p>
+							<p class="gac-desc">In the abandoned village of Bockhampton, a young professor McRoe has heard rumours of a microbe that can supposedly rapidly multiply to create structures. Using her knowledge of microbe abilities, as well as the tools to turbo boost these abilities, will she find what she's looking for?<br>This game is a point-and-click game. Find materials from your surroundings, then take and refine these materials to create powerful microbes. Use these microbes to complete tasks and solve puzzles. This game was made for the University of Portsmouth Game Jam 2020.</p>
 						</div>
 					</div>
 				</a>
@@ -339,8 +376,8 @@
 						showImages('section#about-me img.am-front');
 				});
 			</script>
-			<img src="Assets/AboutMeBackdrop.png" class="am-backdrop">
-			<img src="Assets/AboutMeForeground.png" class="am-front">
+			<img src="Assets/AboutMeBackdrop2.png" class="am-backdrop">
+			<img src="Assets/AboutMeForeground2.png" class="am-front">
 			<div class="am-info">
 				<h1 class="am-intro">Hi, I'm</h1>
 				<h1 class="am-name">Naomi Wirén</h1>
@@ -348,13 +385,12 @@
 			</div>
 			
 			<div class="am-text">
-				<p>My name is Naomi, I'm a Level 5 University of Portsmouth student studying Computer Games Technology. My passion is for games programming mainly, spanning everything from systems for gameplay to tools and streamlining processes, but any part of development intrigues me from design to graphics. I have been developing games personally since 2016, all varying in scope and size. I am a massive movie buff, I like to both write and cook, and when I find the time for it I like to sit down and play or replay a story-heavy game.</p>
+				<p>My name is Naomi, and I'm a student at the University of Portsmouth, studying Computer Games Technology BSc. My passion is for games programming mainly, spanning everything from systems for gameplay to tools and streamlining processes, but any part of development intrigues me from narrative design to 3D graphics. I have been developing games personally since 2016, all varying in scope and size. I am a massive movie buff, I like to both write and cook, and when I find the time for it I like to sit down and play or replay a story-heavy game.</p>
 			</div>
 		</section>
 		<footer>
 			<ul class="socials">
 				<a href="mailto: business@naomiwiren.com" target="_blank" class="fas fa-at"></a>
-				<a href="https://www.discord.gg/ChD4yVD" target="_blank" class="fab fa-discord"></a>
 				<a href="https://www.twitter.com/NaomiWiren" target="_blank" class="fab fa-twitter"></a>
 				<a href="https://noxyper.itch.io/" target="_blank" class="fab fa-itch-io"></a>
 			</ul>
