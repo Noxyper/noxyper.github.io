@@ -177,6 +177,10 @@ section > .backdrop:hover h1.on-hover {
 	background-color: #006edb;
 }
 
+.code-bd.backdrop > h1, .games-bd.backdrop > h1 {
+	color: #bdbdbd;
+}
+
 .code-bd.pattern, .blog-pattern.blog-code {
 	background-image: url("Assets/Graphics/CodeBracketsPattern.png");
 	background-size: 5em;
@@ -357,7 +361,7 @@ section#about-me h1 {
 	font-weight: 300;
 	font-size: 2.88em;
 	
-	color: #bdbdbd;
+	color: #ffffff;
     text-shadow: .05em .05em #424242;
 }
 
@@ -390,7 +394,7 @@ section#about-me p {
 	margin: 0 auto;
 	text-align: center;
 	
-	color: #bdbdbd;
+	color: #ffffff;
 	position: relative;
 	font-family: 'Work Sans', sans-serif;
 	font-weight: 300;
@@ -411,7 +415,7 @@ section#about-me p {
 
 /*Blog*/
 section#blog-posts {
-	margin: 15vh 15vw;
+	margin: 5vh 15vw;
 	font-family: 'Work Sans', sans-serif;
 	font-weight: 300;
 	background-color: rgba(189, 189, 189, 1);
@@ -717,7 +721,7 @@ ul.socials {
 	}
 	
 	section#about-me p {
-		font-size: 1.28vmax;
+		font-size: 1.96vmax;
 	}
 	
 	section#about-me img {
