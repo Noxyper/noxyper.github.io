@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="projects">
+<html lang="en">
     <head>
 	    <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +7,24 @@
         
 		
 		<link rel="icon" type="image/png" href="Assets/Icon.png">
-        <link rel="stylesheet" type="text/css" href="style-new.css" />
-        <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@700&display=swap" rel="stylesheet">
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 		<script src="https://kit.fontawesome.com/14b0c5612d.js" crossorigin="anonymous"></script>
 		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js'></script>
 
-        <title>Naomi Wirén - Portfolio</title>
+        <title>Naomi Wirén | Portfolio</title>
 	</head>
 	<body>
 		<header>
             <nav>
 				<script type='text/javascript'>
-					var sourceSwap = function () {
-						var $this = $(this);
+					var sourceSwapLogo = function () {
+						var $this = $(this).children('img').eq(0);
 						var newSource = $this.data('alt-src');
 						
 						$this.data('alt-src', $this.attr('src'));
@@ -28,372 +32,123 @@
 						$this.fadeIn();
 					}
 					
-					var resetAll = function (param1, param2, param3, param4, param5, param6) {
-						var backdrops = [param1, param2, param3];
-						var galleries = [param4, param5, param6];
+					var sourceSwapMenu = function () {
+						var $this = $(this).children('a').eq(0).children('img').eq(0);
+						var newSource = $this.data('alt-src');
 						
-						backdrops[0].css({"transition": "0.3s ease-in-out", "width": "50%", "margin": "0 -8.33vw", "clip-path": "polygon(0% 0%, 100% 0%, 83.33% 100%, 8.33% 100%)"});
-						backdrops[0].find("div").css({"transition": "0.3s ease-in-out","clip-path": "polygon(0% 0%, 100% 0%, 83.33% 100%, 8.33% 100%)"});
-						backdrops[0].find("h1").css({"visibility": "visible"});
-						backdrops[0].find("h1").addClass("on-hover");
-						backdrops[0].removeClass("bd-active");
-						
-						backdrops[1].css({"transition": "0.4s ease-in-out", "width": "50%", "margin": "0 -8.33vw", "clip-path": "polygon(25% 0%, 100% 0%, 83.33% 100%, 8.33% 100%)"});
-						backdrops[1].find("div").css({"transition": "0.4s ease-in-out", "clip-path": "polygon(25% 0%, 100% 0%, 83.33% 100%, 8.33% 100%)"});
-						backdrops[1].find("h1").css({"visibility": "visible"});
-						backdrops[1].find("h1").addClass("on-hover");
-						backdrops[1].removeClass("bd-active");
-						
-						backdrops[2].css({"transition": "0.6s ease-in-out", "width": "50%", "margin": "0 -8.33vw", "clip-path": "polygon(25% 0%, 100% 0%, 83.33% 100%, 8.33% 100%)"});
-						backdrops[2].find("div").css({"transition": "0.6s ease-in-out","clip-path": "polygon(25% 0%, 100% 0%, 83.33% 100%, 8.33% 100%)"});
-						backdrops[2].find("h1").css({"visibility": "visible"});
-						backdrops[2].find("h1").addClass("on-hover");
-						backdrops[2].removeClass("bd-active");
-						
-						galleries[0].css({"transition": "0.5s ease-in-out", "left": "0vw", "width": "30vw", "margin": "1.166vw", "opacity": "1", "z-index": "0"});
-						galleries[0].find(".gallery-card").css({"width": "inherit", "margin": "1vw", "clip-path" : "polygon(0% 0%, 100% 0%, 98.5% 85%, 33.33% 100%, 0% 100%)"});
-						
-						galleries[1].css({"transition": "0.5s ease-in-out", "left": "33vw", "width": "30vw", "margin": "1.166vw", "opacity": "1", "z-index": "0"});
-						galleries[1].find(".gallery-card").css({"width": "inherit", "margin": "1vw", "clip-path" : "polygon(0% 0%, 100% 0%, 98.5% 85%, 33.33% 100%, 0% 100%)"});
-						
-						galleries[2].css({"transition": "0.5s ease-in-out", "left": "66vw", "width": "30vw", "margin": "1.166vw", "opacity": "1", "z-index": "0"});
-						galleries[2].find(".gallery-card").css({"width": "inherit", "margin": "1vw", "clip-path" : "polygon(0% 0%, 100% 0%, 98.5% 85%, 33.33% 100%, 0% 100%)"});
-						
-						if((screen.width < 800 || screen.availHeight > screen.availWidth)) {
-							galleries[0].find(".gallery-card").css({"clip-path" : "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"});
-							galleries[1].find(".gallery-card").css({"clip-path" : "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"});
-							galleries[2].find(".gallery-card").css({"clip-path" : "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"});
-						}
-						
-						$('section#about-me img.am-backdrop').css({"opacity": "1"});
-						$('section#about-me div.am-delete').remove();
+						$this.data('alt-src', $this.attr('src'));
+						$this.attr('src', newSource);
+						$this.fadeIn();
 					}
-					
-					var fillScreen = function (param1, param2) {
-						var $this = $(this);
-						var neighbours = [param1, param2];
-						
-						$this.css({"transition": "0.5s ease-in-out", "width": "95%", "margin": "0", "clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"});
-						$this.find("div").css({"clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"});
-						$this.find("h1").css("visibility", "visible");
-						
-						$this.find("h1").removeClass("on-hover");
-						$this.addClass("bd-active");
-						
-						neighbours[0].css({"transition": "0.6s ease-in-out","width": "2.5%", "margin": "0", "clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"});
-						neighbours[0].find("div").css({"clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"});
-						neighbours[0].find("h1").css("visibility", "hidden");
-						neighbours[0].find("h1").addClass("on-hover");
-						neighbours[0].removeClass("bd-active");
-						
-						neighbours[1].css({"transition": "0.6s ease-in-out","width": "2.5%", "margin": "0", "clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"});
-						neighbours[1].find("div").css({"clip-path": "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)"});
-						neighbours[1].find("h1").css("visibility", "hidden");
-						neighbours[1].find("h1").addClass("on-hover");
-						neighbours[1].removeClass("bd-active");
-						
-						$('section#about-me img.am-backdrop').css({"opacity": "0.5"});
-						
-						$('section#about-me div.am-delete').remove();
-						$('section#about-me').prepend('<div class="' + $this.attr('class').split(/\s+/)[0] + ' ' + $this.attr('class').split(/\s+/)[1] + ' am-delete" style="transition: none; margin: 0; position: absolute; top: 0; left: 0; clip-path: none; width: 100vw; height: 100vh; z-index: 0;"><div style="clip-path: none;"></div></div>');
-						$('section#about-me div div').addClass($this.attr('class').split(/\s+/)[0] + " pattern");
-						
-					}
-					
-					var hideGallery = function (param1, param2, param3) {
-						var me = param1;
-						var neighbours = [param2, param3];
-						
-						me.css({"transition": "0.5s ease-in-out", "left": "0%", "width": "98%", "margin": "0 1.166vw", "opacity": "1", "z-index": "0"}).delay(500).promise().done(function(){
-							me.find(".gallery-card").css({"width": "100%", "margin": "1vw 0", "clip-path" : "polygon(0% 0%, 100% 0%, 99.5% 85%, 11.11% 100%, 0% 100%)"});
-							me.find(".gallery-card").addClass("gac-enable");
-						});
-						
-						neighbours[0].css({"transition": "opacity 0.5s ease-in-out", "opacity": "0"}).delay(500).promise().done(function(){
-							neighbours[0].css({"transition": "none", "width": "0%", "margin": "0", "left": "0%", "z-index": "-1"});
-						});
-						
-						neighbours[1].css({"transition": "opacity 0.5s ease-in-out", "opacity": "0"}).delay(500).promise().done(function(){
-							neighbours[1].css({"transition": "none", "width": "0%", "margin": "0", "left": "0%", "z-index": "-1"});
-						})
-					}
-									
-					$(function () {
-						$('div.writing-bd.backdrop').click(function() {
-							if($('div.writing-bd.backdrop').hasClass('bd-active')) 
-							{
-								resetAll(
-								$('div.writing-bd.backdrop'),
-								$('div.code-bd.backdrop'),
-								$('div.games-bd.backdrop'),
-								$('div.writing-ga.gallery'),
-								$('div.code-ga.gallery'),
-								$('div.games-ga.gallery')
-								);
-							}
-							else
-							{
-								fillScreen.call($('div.writing-bd.backdrop'),
-								$('div.code-bd.backdrop'),
-								$('div.games-bd.backdrop')
-								);
-								hideGallery(
-								$('div.writing-ga.gallery'),
-								$('div.code-ga.gallery'),
-								$('div.games-ga.gallery')
-								);
-							}
-						});
-					});
-					
-					$(function () {
-						$('div.code-bd.backdrop').click(function() {
-							if($('div.code-bd.backdrop').hasClass('bd-active')) 
-							{
-								resetAll(
-								$('div.writing-bd.backdrop'),
-								$('div.code-bd.backdrop'),
-								$('div.games-bd.backdrop'),
-								$('div.writing-ga.gallery'),
-								$('div.code-ga.gallery'),
-								$('div.games-ga.gallery')
-								);
-							}
-							else
-							{
-								fillScreen.call($('div.code-bd.backdrop'),
-								$('div.writing-bd.backdrop'),
-								$('div.games-bd.backdrop')
-								);
-								hideGallery(
-								$('div.code-ga.gallery'),
-								$('div.writing-ga.gallery'),
-								$('div.games-ga.gallery')
-								);
-							}
-						});
-					});
-					
-					$(function () {
-						$('div.games-bd.backdrop').click(function() {
-							if($('div.games-bd.backdrop').hasClass('bd-active')) 
-							{
-								resetAll(
-								$('div.writing-bd.backdrop'),
-								$('div.code-bd.backdrop'),
-								$('div.games-bd.backdrop'),
-								$('div.writing-ga.gallery'),
-								$('div.code-ga.gallery'),
-								$('div.games-ga.gallery')
-								);
-							}
-							else
-							{
-								fillScreen.call($('div.games-bd.backdrop'),
-								$('div.writing-bd.backdrop'),
-								$('div.code-bd.backdrop')
-								);
-								hideGallery(
-								$('div.games-ga.gallery'),
-								$('div.writing-ga.gallery'),
-								$('div.code-ga.gallery')
-								);
-							}
-						});
-					});
-					
-					$(function () {
-						$('a#projects').click(function() {
-							resetAll(
-							$('div.writing-bd.backdrop'),
-							$('div.code-bd.backdrop'),
-							$('div.games-bd.backdrop'),
-							$('div.writing-ga.gallery'),
-							$('div.code-ga.gallery'),
-							$('div.games-ga.gallery')
-							);
-						});
-					});
 
 					$(function () {
-						$('img.logo').hover(sourceSwap, sourceSwap);
+						$('a.navigation-logo').hover(sourceSwapLogo, sourceSwapLogo);
+					});
+					
+					$(function () {
+						$('nav').hover(sourceSwapMenu, sourceSwapMenu);
 					});
 				</script>
-				<div>
-					<a href="#projects" id="projects">Projects</a>
-					<a href="#about-me">About Me</a>
-					<a href="https://naomiwiren.com/blog">Blog</a>
+				<div class="navigation-hyperlinks">
+					<a href="projects.html">Projects</a>
+					<a href="index.html#about-me">About Me</a>
 					<a href="Files/CV.pdf" target="_blank">CV</a>
 				</div>
-				<a href="https://naomiwiren.com/">
-					<img data-alt-src="Assets/BannerWHITE.png" src="Assets/BannerGREY.png" class="logo">
+				<a href="index.html" class="navigation-logo">
+					<img data-alt-src="Assets/Banner_White.png" src="Assets/Banner_Black.png" class="logo">
 				</a>
             </nav>
 		</header>
-		<section class="backdrops">			
-			<div class="writing-bd backdrop">
-				<div class="writing-bd pattern"></div>
-				<h1 class="on-hover">Narrative</h1>
-			</div><!--
-			--><div class="code-bd backdrop">
-				<div class="code-bd pattern"></div>
-				<h1 class="on-hover">Code</h1>
-			</div><!--
-			--><div class="games-bd backdrop">
-				<div class="games-bd pattern"></div>
-				<h1 class="on-hover">Games</h1>
-			</div>
-        </section>
-		<section class="galleries">		
-			<div class="writing-ga gallery">
-				<a href="Files/HaavsTalesOfScanzhi.pdf" target="_blank">
-					<div class="writing-gac gallery-card">
-						<img src="Assets/Thumbnails/HaavThumb.png" class="gac-image">
-						<div class="writing-gac-band gac-band"></div>
-						<div class="gac-text">
-							<h1 class="gac-title">Haav's Tales of Scanzhi</h1>
-							<p class="gac-desc">A homebrew Dungeons and Dragons campaign I'm currently working on with custom races, backgrounds, and spells that are all written and developed by me. The campaign follows a religious cult and their goal of resurrecting old, forgotten gods. This project is currently under development and thusly will be updated on here occassionally.</p>
+		<section id="intro">
+			<div class="backdrop">
+				<div class="pattern">
+					<div class="profile">
+						<img src="Assets/Portrait.png">
+						<div class="profile-info">
+							<div>
+								<h1>Naomi Nemo Wirén</h1>
+								<p>Programmer, Writer, Academic</p>
+							</div>
 						</div>
 					</div>
-				</a>
-				<a href="https://www.naomiwiren.com/blog/short-story/short-story-homepage">
-					<div class="writing-gac gallery-card">
-						<img src="Assets/Thumbnails/ShortStoryThumb.png" class="gac-image">
-						<div class="writing-gac-band gac-band"></div>
-						<div class="gac-text">
-							<h1 class="gac-title">Short Stories</h1>
-							<p class="gac-desc">Occasionally, I write some short stories inspired by prompts found online. Among these are some that are simple slice of life stories, some that are a bit more metaphorical and fantastical, and some that are pure fantasy and spectacle.</p>
-						</div>
-					</div>
-				</a>
-			</div><!--
-			--><div class="code-ga gallery">
-				<a href="https://github.com/Noxyper/VATSReplica">
-					<div class="code-gac gallery-card">
-						<img src="Assets/Thumbnails/VATSThumb.png" class="gac-image">
-						<div class="code-gac-band gac-band"></div>
-						<div class="gac-text">
-							<h1 class="gac-title">V.A.T.S. System from Fallout 4</h1>
-							<p class="gac-desc">A recreation of the targeting system as seen in the 3D Fallout games (Fallout 3, Fallout: New Vegas, Fallout 4). Created with Unity.</p>
-						</div>
-					</div>
-				</a>
-				<a href="https://github.com/Noxyper/CustomUnityToolbox">
-					<div class="code-gac gallery-card">
-						<img src="Assets/Thumbnails/ToolboxThumb.png" class="gac-image">
-						<div class="code-gac-band gac-band"></div>
-						<div class="gac-text">
-							<h1 class="gac-title">Custom Unity Tools</h1>
-							<p class="gac-desc">Developed a custom Unity toolbox that makes use of translation, rotation, scale, shearing, and squash & stretch. The toolbox uses a custom transform component and is a tech demo that could theoretically be translated into a custom engine with ease.</p>
-						</div>
-					</div>
-				</a>
-				<a>
-					<div class="code-gac gallery-card">
-						<img src="Assets/Thumbnails/MaverickThumb.png" class="gac-image">
-						<div class="code-gac-band gac-band"></div>
-						<div class="gac-text">
-							<h1 class="gac-title">Maverick Aviation - Real-Time Interactive Group Project</h1>
-							<p class="gac-desc">A final-year group project developed in a team of 5. The project is still under development, and more of this project will be shown off by late March.</p>
-						</div>
-					</div>
-				</a>
-				<!--<a href="https://github.com/Noxyper/CubeSatVR"> No don't look at this, this project is in no state to show off yet :(
-					<div class="code-gac gallery-card">
-						<img src="Assets/Thumbnails/SPINThumb.png" class="gac-image">
-						<div class="code-gac-band gac-band"></div>
-						<div class="gac-text">
-							<h1 class="gac-title">CubeSat Prototyping Tool</h1>
-							<p class="gac-desc">In 8 weeks, I researched and developed a prototyping tool for developing CubeSats. The tool was developed as part of the Satellite Applications SPIN programme, and is to be distributed and used by engineers in prototyping and developing a satellite with a client.</p>
-						</div>
-					</div>
-				</a>-->
-				<a href="https://github.com/Noxyper/noxyper.github.io">
-					<div class="code-gac gallery-card">
-						<img src="Assets/Thumbnails/PortfolioThumb.png" class="gac-image">
-						<div class="code-gac-band gac-band"></div>
-						<div class="gac-text">
-							<h1 class="gac-title">Portfolio</h1>
-							<p class="gac-desc">This portfolio was written by myself and hosted on Github.</p>
-						</div>
-					</div>
-				</a>
-			</div><!--
-			--><div class="games-ga gallery">
-				<a href="http://noxyper.itch.io/delivery-demolition">
-					<div class="games-gac gallery-card">
-						<img src="Assets/Thumbnails/DeliveryDemolitionThumb.png" class="gac-image">
-						<div class="games-gac-band gac-band"></div>
-						<div class="gac-text">
-							<h1 class="gac-title">Delivery Demolition</h1>
-							<p class="gac-desc">Ever wondered why your packages never arrive in one piece?<br><br>The Northern Post Demolition Co. makes a profit destroying your packages so the postmen don't have to! You're newly employed at their local factory, and it's your mission to demolish as many boxes as possible.<br><br>The game can be played exclusively with a mouse, as the goal of this game was to have a single control (in this game's case that would be click-and-drag).</p>
-						</div>
-					</div>
-				</a>
-				<a href="https://daniel-kershaw.itch.io/rockhampton">
-					<div class="games-gac gallery-card">
-						<img src="Assets/Thumbnails/RockhamptonThumb.png" class="gac-image">
-						<div class="games-gac-band gac-band"></div>
-						<div class="gac-text">
-							<h1 class="gac-title">Rockhampton: A Microbial Mystery</h1>
-							<p class="gac-desc">In the abandoned village of Bockhampton, a young professor McRoe has heard rumours of a microbe that can supposedly rapidly multiply to create structures. Using her knowledge of microbe abilities, as well as the tools to turbo boost these abilities, will she find what she's looking for?<br>This game is a point-and-click game. Find materials from your surroundings, then take and refine these materials to create powerful microbes. Use these microbes to complete tasks and solve puzzles. This game was made for the University of Portsmouth Game Jam 2020.</p>
-						</div>
-					</div>
-				</a>
-				<a href="https://noxyper.itch.io/caribbean-waters">
-					<div class="games-gac gallery-card">
-						<img src="Assets/Thumbnails/CaribbeanWatersThumb.png" class="gac-image">
-						<div class="games-gac-band gac-band"></div>
-						<div class="gac-text">
-							<h1 class="gac-title">Caribbean Waters</h1>
-							<p class="gac-desc">Raise the sails, man the port-side cannon, and get ready for an adventure!<br><br>Caribbean Waters is a multiplayer party game where you, together with three friends, try to hold a ship together on the open ocean blue. You and your crew can act as ferocious pirates and attack any ship that lines your sight, or maybe you are more of the business crew, who sell cargo wherever you may go in an attempt to become the richest men in all of the Caribbean.</p>
-						</div>
-					</div>
-				</a>
+				</div>
 			</div>
 		</section>
-		<section id="about-me">
-			<script type="text/javascript">
-				function showImages(el) {
-					var windowHeight = jQuery( window ).height();
-					$(el).each(function(){
-						var thisPos = $(this).offset().top;
-
-						var topOfWindow = $(window).scrollTop();
-						if (topOfWindow + windowHeight - 200 > thisPos ) {
-							$(this).addClass("fadeIn");
-						}
-					});
-				}
-
-				// if the image in the window of browser when the page is loaded, show that image
-				$(document).ready(function(){
-						showImages('section#about-me img.am-front');
-				});
-
-				// if the image in the window of browser when scrolling the page, show that image
-				$(window).scroll(function() {
-						showImages('section#about-me img.am-front');
-				});
-			</script>
-			<img src="Assets/AboutMeBackdrop2.png" class="am-backdrop">
-			<img src="Assets/AboutMeForeground2.png" class="am-front">
-			<div class="am-info">
-				<h1 class="am-intro">Hi, I'm</h1>
-				<h1 class="am-name">Naomi Wirén</h1>
-				<h1 class="am-profession">and I'm a game developer</h1>
-			</div>
-			
-			<div class="am-text">
-				<p>My name is Naomi, and I'm a student at the University of Portsmouth, studying Computer Games Technology BSc. My passion is for games programming mainly, spanning everything from systems for gameplay to tools and streamlining processes, but any part of development intrigues me from narrative design to 3D graphics. I have been developing games personally since 2016, all varying in scope and size. I am a massive movie buff, I like to both write and cook, and when I find the time for it I like to sit down and play or replay a story-heavy game.</p>
-			</div>
+		<section id="content">
+			<section id="about-me">
+				<img src="Assets/AboutMe_Backdrop.png" class="banner">
+				<h1>Apologies, I didn't expect company...</h1>
+				<p>Thank you for checking out my portfolio! If you are here just to see my projects, you can have a look at the section to the right of this intro. You can also from here double-check anything from my CV that would merit needing receipts, such as any certificates or awards. But if you're here to learn more about me - I appreciate it! Hopefully you'll find what you're looking for!<br><br>My name is Naomi Nemo Wirén. I'm a Swedish game developer, practicing programming, games design, and games writing since 2016. Back when I moved to the UK in 2019, I had one goal: to become someone who knew what they talked about. Since then I have accomplished two degrees, taken part in multiple outreach programmes to help get university students into the games industry, and taken part in developing a product for a successful London start-up.<br><br>Outside of my feats, I am currently pursuing a rekindled passion of mine. Writing and storytelling has always interested me, and I am currently pursuing paths to become a better writer. I have in the past written stories for all manners of mediums, ranging from comedy sketches with my friends when I was in primary school, to short stories and poems in my college days. These days, I am still writing in the form of my personal book writing project, as well as learning how to adapt a story for games both through game writing courses tutored by respected writers in the games industry such as Lorne Nudel and more practically and small-scale in the hobby taking up most of my free-time: tabletop role-playing games.<br><br>Whether you are considering me for a writing position or a programming position, I promise to not let you down. I always aim to go above and beyond - this website for example was written by hand in HTML, CSS, and JQuery, despite me not having any prior experience with these languages. I hope my tenacity and willpower to ensure that whatever project I work on is as best as it can be sounds like something you would consider.<br><br>Kind regards,</p>
+				<img src="Assets/Signature.png" class="signature">
+				<div class="extra-evidence">
+					<a href="Files/TIGACertificate.pdf">'TIGA Graduate of the Year: Programmer 2022' Certificate</a>		
+				</div>
+			</section>
+			<section id="projects"><!--HREFs should lead to a subpage about the different projects-->
+				<a href="ProjectPages/anythingworld.html">
+					<div class="project">
+						<img src="Assets/Thumbnails/AnythingWorld.png" class="thumbnail">
+						<div class="project-text">
+							<h1>Anything World - Unity Plugin</h1>
+							<p>Developed the tool for Unity users to interface with the capabilities of Anything World, ranging from streaming in assets from the web to ML-powered automatic rigging.</p>
+						</div>
+					</div>
+				</a>
+				<!--
+				<a href="ProjectPages/monstroushetero.html">
+					<div class="project">
+						<img src="Assets/Thumbnails/ELVTRGameWriting.png" class="thumbnail">
+						<div class="project-text">
+							<h1>Monstrous Hetero</h1>
+							<p>A game story developed during the Game Writing course headed by Lorne Nudel.</p>
+						</div>
+					</div>
+				</a>
+				-->
+				<a href="ProjectPages/battlesweeper.html">
+					<div class="project">
+						<img src="Assets/Thumbnails/Battlesweeper.png" class="thumbnail">
+						<div class="project-text">
+							<h1>Battlesweeper</h1>
+							<p>Developed as part of Grads in Games 'Search for a Star' competition in 2022. A combination of Battleships and Minesweeper, the game showcases my proficiencies with local multiplayer capabilities and game AI.</p>
+						</div>
+					</div>
+				</a>
+				<a href="ProjectPages/ugj.html">
+					<div class="project">
+						<img src="Assets/Thumbnails/GameJam.png" class="thumbnail">
+						<div class="project-text">
+							<h1>University Game Jam</h1>
+							<p>Annually, I've taken part in the University of Portsmouth Game Jam, a week-long game jam with a focus on healthy development cycles and experimentation. Taken part both in teams and individually.</p>
+						</div>
+					</div>
+				</a>
+				<a href="ProjectPages/maverickaviation.html">
+					<div class="project">
+						<img src="Assets/Thumbnails/MaverickAviation.png" class="thumbnail">
+						<div class="project-text">
+							<h1>XR Jetpack Simulator</h1>
+							<p>Developed as part of a final-year coursework for Maverick Aviation. Saw the interfacing between Unity and a real-time physics simulator, and further communication with a 4DoF platform and Valve Index VR headset.</p>
+						</div>
+					</div>
+				</a>
+				<a href="ProjectPages/unityexperiments.html">
+					<div class="project">
+						<img src="Assets/Thumbnails/UnityExperiments.png" class="thumbnail">
+						<div class="project-text">
+							<h1>Unity Experiments</h1>
+							<p>A collection of the different coursework I developed throughout my BSc in Unity. Coursework touches upon gameplay programming fundamentals, linear algebra, tools development, and game AI.
+						</div>
+					</div>
+				</a>
+				<div class="--center-more-projects">
+					<a href="projects.html">
+						<div class="more-projects">
+							<h1>Load All Projects</h1>
+						</div>
+					</a>
+				</div>
+			</section>
 		</section>
-		<footer>
-			<ul class="socials">
-				<a href="mailto: business@naomiwiren.com" target="_blank" class="fas fa-at"></a>
-				<a href="https://www.twitter.com/NaomiWiren" target="_blank" class="fab fa-twitter"></a>
-				<a href="https://noxyper.itch.io/" target="_blank" class="fab fa-itch-io"></a>
-			</ul>
-		</footer>
 	</body>
 </html>
