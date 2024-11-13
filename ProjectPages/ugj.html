@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+		
+		<link rel="icon" type="image/png" href="../Assets/Icon.png">
+        <link rel="stylesheet" type="text/css" href="../style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@700&display=swap" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/14b0c5612d.js" crossorigin="anonymous"></script>
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js'></script>
+
+        <title>Naomi Wirén | University Game Jam</title>
+	</head>
+	<body>
+		<header>
+            <nav>
+				<script type='text/javascript'>
+					var setDark = function () {
+						var $this = $(this).children('img').eq(0);
+						var newSource = $this.data('dark');
+						
+						$this.attr('src', newSource);
+						$this.fadeIn();
+					}
+					
+					var setLight = function () {
+						var $this = $(this).children('img').eq(0);
+						var newSource = $this.data('light');
+						
+						$this.attr('src', newSource);
+						$this.fadeIn();
+					}
+					
+					$(function () {
+						$('a.navigation-logo').hover(setLight, setDark);
+					});
+				</script>
+				<div class="navigation-hyperlinks">
+					<a href="../projects.html">Projects</a>
+					<a href="../index.html#about-me">About Me</a>
+					<a href="../Files/CV.pdf" target="_blank">CV</a>
+				</div>
+				<a href="../index.html" class="navigation-logo">
+					<img data-light="../Assets/Banner_White.png" data-dark="../Assets/Banner_Black.png" src="../Assets/Banner_Black.png" class="logo">
+				</a>
+            </nav>
+		</header>
+		<section id="intro">
+			<div class="backdrop">
+				<div class="pattern">
+					<div class="profile">
+						<img src="../Assets/Thumbnails/GameJam.png">
+						<div class="profile-info">
+							<h1>University Game Jam</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="project-detail">
+			<h1>University Game Jam</h1>
+			<p>Since 2020, I have taken part in the University of Portsmouth's annual game jam. This is a 4-day game jam, taking place over a working week, constrained to healthy working hours of 9-5, with playtesting and judging taking place on the Friday. I have over the years constistently taken part, whether by myself or in a team.</p>
+			
+			<h1>2024 - R.E.M.</h1>
+			<p>In the most recent game jam, the team from 2023 mostly got back together. This year, I was unable to join in-person, due to commitments back at home, so I worked half-time on this game. As a team of 6, we developed an endless runner. The game saw a rat running along the back of a dragon that was curving off into the distance. For this project, as one of two programmers my focus laid primarily on the dragon shader, player controller, and collectibles spawning. R.E.M. won best overall game and best use of technology, with the reason given being the use of our different algorithms, such as the displacement shader and level generation.</p>
+			<div class="--center-game-link">
+				<a href="https://pigeoncubed.itch.io/rem" target="_blank">
+					<div class="game-link">
+						<h1>Play the Game Here</h1>
+					</div>
+				</a>
+			</div>
+			<div class="project-gallery">
+				<img src="ugj.html_Assets/2024_1.png" style="flex: 1 1">
+				<img src="ugj.html_Assets/2024_2.png" style="flex: 0.5 1">
+			</div>
+			
+			<h1>2023 - Chakram</h1>
+			<p>For my biggest project during the University Game Jam, as a team of 7 we developed a boss rush game. The game saw game AI systems that allowed for phases of bosses to appear, becoming increasingly harder as the boss progressed. Additionally, the game saw extensive research into Hinduistic deities, with an emphasis to only be inspired by these deities rather than portraying them directly. This research was then distilled into an opening cutscene to contextualise the game. The game was awarded for it's engagement with diversity.</p>
+			<div class="--center-game-link">
+				<a href="https://pigeoncubed.itch.io/chakram" target="_blank">
+					<div class="game-link">
+						<h1>Play the Game Here</h1>
+					</div>
+				</a>
+			</div>
+			<div class="project-gallery">
+				<img src="ugj.html_Assets/2023_1.png" style="flex: 1 1">
+				<img src="ugj.html_Assets/2023_2.png" style="flex: 0.75 1">
+			</div>
+			
+			<h1>2022 - 1972: The Reece Tapes</h1>
+			<p>In my final year of my Bachelor's degree, I once again joined forces with a few friends and developed a point-and-click assassination game. The game saw the player move around a manor and needing to choose the right dialogue option to convince a character to be sacrificed at an altar. The game saw a refinement of the point-and-click system originally written back in 2020, as well as a custom dialogue system based on CSV files. The game was awarded for it's adaptation of the themes, which saw extensive research into the generated topics.</p>
+			<div class="--center-game-link">
+				<a href="https://pigeoncubed.itch.io/1972-the-reece-tapes" target="_blank">
+					<div class="game-link">
+						<h1>Play the Game Here</h1>
+					</div>
+				</a>
+			</div>
+			<div class="project-gallery">
+				<img src="ugj.html_Assets/2022_1.png" style="flex: 1 1">
+				<img src="ugj.html_Assets/2022_2.png" style="flex: 1 1">
+			</div>
+			
+			<h1>2021 - The Clunky Cheesewheel</h1>
+			<p>For the second game jam I took part in, I developed a game by myself. For this game, I honed in on some skills I had learned during my second-year, such as look-up tables, CSV file reading and parsing, as well as gaining a deeper understanding of the Unity UI system.</p>
+			<div class="--center-game-link">
+				<a href="https://wimiwastaken.itch.io/the-clunky-cheesewheel" target="_blank">
+					<div class="game-link">
+						<h1>Play the Game Here</h1>
+					</div>
+				</a>
+			</div>
+			<div class="project-gallery">
+				<img src="ugj.html_Assets/2021_1.png" style="flex: 1 1">
+				<img src="ugj.html_Assets/2021_2.png" style="flex: 1 1">
+			</div>
+			
+			<h1>2020 - Rockhampton: A Microbial Mystery</h1>
+			<p>My first forté into the University Game Jam saw me working on a point-and-click adventure game. This game saw me in a team of three, where I learned the basics of NavMesh and AI pathfinding.</p>
+			<div class="--center-game-link">
+				<a href="https://daniel-kershaw.itch.io/rockhampton" target="_blank">
+					<div class="game-link">
+						<h1>Play the Game Here</h1>
+					</div>
+				</a>
+			</div>
+			<div class="project-gallery">
+				<img src="ugj.html_Assets/2020_1.png" style="flex: 1 1">
+				<img src="ugj.html_Assets/2020_2.png" style="flex: 1 1">
+			</div>
+		</section>
+	</body>
+</html>

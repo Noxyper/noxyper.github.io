@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+		
+		<link rel="icon" type="image/png" href="../Assets/Icon.png">
+        <link rel="stylesheet" type="text/css" href="../style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@700&display=swap" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/14b0c5612d.js" crossorigin="anonymous"></script>
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js'></script>
+
+        <title>Naomi Wirén | Anything World - Unity Plugin</title>
+	</head>
+	<body>
+		<header>
+            <nav>
+				<script type='text/javascript'>
+					var setDark = function () {
+						var $this = $(this).children('img').eq(0);
+						var newSource = $this.data('dark');
+						
+						$this.attr('src', newSource);
+						$this.fadeIn();
+					}
+					
+					var setLight = function () {
+						var $this = $(this).children('img').eq(0);
+						var newSource = $this.data('light');
+						
+						$this.attr('src', newSource);
+						$this.fadeIn();
+					}
+					
+					$(function () {
+						$('a.navigation-logo').hover(setLight, setDark);
+					});
+				</script>
+				<div class="navigation-hyperlinks">
+					<a href="../projects.html">Projects</a>
+					<a href="../index.html#about-me">About Me</a>
+					<a href="../Files/CV.pdf" target="_blank">CV</a>
+				</div>
+				<a href="../index.html" class="navigation-logo">
+					<img data-light="../Assets/Banner_White.png" data-dark="../Assets/Banner_Black.png" src="../Assets/Banner_Black.png" class="logo">
+				</a>
+            </nav>
+		</header>
+		<section id="intro">
+			<div class="backdrop">
+				<div class="pattern">
+					<div class="profile">
+						<img src="../Assets/Thumbnails/AnythingWorld.png">
+						<div class="profile-info">
+							<h1>Anything World - Unity Plugin</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="project-detail">
+			<h1>Anything World</h1>
+			<p>Between 2022 and 2024, I worked as a 3D Software Engineer for the London upstart Anything World. In the years since, the studio has grown to be over 30 people and has seen a large growth in product variety, from server-side automatic rigging and asset streaming in a large variety of commercial game-centric tools and engines, such as Unity, Unreal, and Blender.<br><br>During the period of May 2022 to September 2023, my duties primarily focused on UX and UI improvements, with my lead taking charge in developing the systems of the tool. During this time, the two of us worked on the Unity plugin by ourselves. In September 2023, after my lead's departure from the company, I took responsibility over the Unity plugin primarily, introducing features such as the server-side ML-powered automatic rigging into the Unity plugin, as well as refining the user experience and codebase.</p>
+			<h1>Responsibilities</h1>
+			<ul>
+				<li>Worked extensively with editor-side development in the Unity Engine.</li>
+				<li>Implemented web API-centric mechanics and integrated them into the Unity Editor.</li>
+				<li>Translated Figma UX designs into a practical user interface using the Unity IMGUI systems.</li>
+				<li>Represented the company at national and international conferences, such as GDC, Develop:Brighton, and Web Summit.</li>
+				<li>Held presentations and product showcases, ranging from non-profit organisations such as Grads in Games and Into Games to prospecting clients such as game studios.</li>
+			</ul>
+			<div class="--center-game-link">
+				<a href="https://anything.world/" target="_blank">
+					<div class="game-link">
+						<h1>Download the Tool Here</h1>
+					</div>
+				</a>
+			</div>
+			<div class="project-gallery">
+				<img src="anythingworld.html_Assets/AnythingWorld_Browser.png" style="flex: 1 1">
+				<img src="../Assets/AboutMe_Backdrop.png" style="flex: 4.8 1">
+			</div>
+			<div class="project-gallery">	
+				<img src="anythingworld.html_Assets/GDC.png" style="flex: 1 1">
+				<img src="anythingworld.html_Assets/AnythingWorld_AA.png" style="flex: 0.49 1">
+			</div>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+		
+		<link rel="icon" type="image/png" href="../Assets/Icon.png">
+        <link rel="stylesheet" type="text/css" href="../style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@700&display=swap" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/14b0c5612d.js" crossorigin="anonymous"></script>
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js'></script>
+
+        <title>Naomi Wirén | Battlesweeper</title>
+	</head>
+	<body>
+		<header>
+            <nav>
+				<script type='text/javascript'>
+					var setDark = function () {
+						var $this = $(this).children('img').eq(0);
+						var newSource = $this.data('dark');
+						
+						$this.attr('src', newSource);
+						$this.fadeIn();
+					}
+					
+					var setLight = function () {
+						var $this = $(this).children('img').eq(0);
+						var newSource = $this.data('light');
+						
+						$this.attr('src', newSource);
+						$this.fadeIn();
+					}
+					
+					$(function () {
+						$('a.navigation-logo').hover(setLight, setDark);
+					});
+				</script>
+				<div class="navigation-hyperlinks">
+					<a href="../projects.html">Projects</a>
+					<a href="../index.html#about-me">About Me</a>
+					<a href="../Files/CV.pdf" target="_blank">CV</a>
+				</div>
+				<a href="../index.html" class="navigation-logo">
+					<img data-light="../Assets/Banner_White.png" data-dark="../Assets/Banner_Black.png" src="../Assets/Banner_Black.png" class="logo">
+				</a>
+            </nav>
+		</header>
+		<section id="intro">
+			<div class="backdrop">
+				<div class="pattern">
+					<div class="profile">
+						<img src="../Assets/Thumbnails/Battlesweeper.png">
+						<div class="profile-info">
+							<h1>Battlesweeper</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="project-detail">
+			<h1>Battlesweeper</h1>
+			<p>In the final year of my Bachelor's, amidst my other coursework I took part in the Grads in Games competition "Search for a Star". The competition saw me attempt to twist an existing project into something unique. The year I participated, we were given a project that had the basic mechanics of Minesweeper attached.<br><br>In February 2022, when I had the time to sit down and work on this project, freshly having finished my game AI course at the university, I attempted to extend the functionality of Minesweeper to incorporate some multiplayer elements, specifically from Battleships. As multiplayer games propose an issue in testing as it requires multiple players, I also added in an AI for players to play against. Additionally, I took the time to ensure the game felt "complete" by juicing the game slightly - adding in some custom music, slight animations, shaders, and alternative game modes.<br><br>This project, in conjunction with a code test, made me a finalist in the Search for a Star competition, where I was in the standing as one of the best student programmers in the graduating year of 2022 across the UK.</p>
+			<h1>Skills Showcased</h1>
+			<ul>
+				<li>Successfully dissecting and understanding an existing codebase.</li>
+				<li>Juicing, bug testing, and quality assurance.</li>
+				<li>Research into and successful implementation of suitable artificial intelligence for Minesweeper.</li>
+				<li>Creative problem solving and game design work.</li>
+			</ul>
+			<div class="--center-game-link">
+				<a href="https://wimiwastaken.itch.io/battlesweeper" target="_blank">
+					<div class="game-link">
+						<h1>Play the Game Here</h1>
+					</div>
+				</a>
+			</div>
+			<div class="project-gallery">
+				<img src="battlesweeper.html_Assets/Game_0.png" style="flex: 1 1">
+				<img src="battlesweeper.html_Assets/Game_1.png" style="flex: 2.67 1">
+			</div>
+			<div class="project-gallery">	
+				<img src="battlesweeper.html_Assets/Game_2.png" style="flex: 1 1">
+				<img src="battlesweeper.html_Assets/Game_3.png" style="flex: 1 1">
+			</div>
+		</section>
+	</body>
+</html>
