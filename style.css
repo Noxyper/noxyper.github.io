@@ -156,7 +156,7 @@ section > .backdrop {
 
 .pattern {
 	background-size: 40vh;
-    background-image: url("Assets/Graphics/BackdropPattern.png");
+    background-image: url("assets/BackdropPattern.png");
 
 	width: 100%;
 	height: inherit;
