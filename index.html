@@ -23,30 +23,24 @@
 		<header>
             <nav>
 				<script type='text/javascript'>
-					var sourceSwapLogo = function () {
+					var setDark = function () {
 						var $this = $(this).children('img').eq(0);
-						var newSource = $this.data('alt-src');
+						var newSource = $this.data('dark');
 						
-						$this.data('alt-src', $this.attr('src'));
 						$this.attr('src', newSource);
 						$this.fadeIn();
 					}
 					
-					var sourceSwapMenu = function () {
-						var $this = $(this).children('a').eq(0).children('img').eq(0);
-						var newSource = $this.data('alt-src');
+					var setLight = function () {
+						var $this = $(this).children('img').eq(0);
+						var newSource = $this.data('light');
 						
-						$this.data('alt-src', $this.attr('src'));
 						$this.attr('src', newSource);
 						$this.fadeIn();
 					}
-
-					$(function () {
-						$('a.navigation-logo').hover(sourceSwapLogo, sourceSwapLogo);
-					});
 					
 					$(function () {
-						$('nav').hover(sourceSwapMenu, sourceSwapMenu);
+						$('a.navigation-logo').hover(setLight, setDark);
 					});
 				</script>
 				<div class="navigation-hyperlinks">
@@ -55,7 +49,7 @@
 					<a href="Files/CV.pdf" target="_blank">CV</a>
 				</div>
 				<a href="index.html" class="navigation-logo">
-					<img data-alt-src="Assets/Banner_White.png" src="Assets/Banner_Black.png" class="logo">
+					<img data-light="Assets/Banner_White.png" data-dark="Assets/Banner_Black.png" src="Assets/Banner_Black.png" class="logo">
 				</a>
             </nav>
 		</header>
@@ -84,7 +78,7 @@
 					<a href="Files/TIGACertificate.pdf">'TIGA Graduate of the Year: Programmer 2022' Certificate</a>		
 				</div>
 			</section>
-			<section id="projects"><!--HREFs should lead to a subpage about the different projects-->
+			<section id="projects">
 				<a href="ProjectPages/anythingworld.html">
 					<div class="project">
 						<img src="Assets/Thumbnails/AnythingWorld.png" class="thumbnail">
@@ -95,11 +89,11 @@
 					</div>
 				</a>
 				<!--
-				<a href="ProjectPages/monstroushetero.html">
+				<a href="ProjectPages/suiphobia.html">
 					<div class="project">
 						<img src="Assets/Thumbnails/ELVTRGameWriting.png" class="thumbnail">
 						<div class="project-text">
-							<h1>Monstrous Hetero</h1>
+							<h1>Suiphobia</h1>
 							<p>A game story developed during the Game Writing course headed by Lorne Nudel.</p>
 						</div>
 					</div>

@@ -40,8 +40,8 @@ nav {
 	display: flex;
 
 	background-color: #ECECEC;
-	border-radius: 0.8vh;
     color: #1C1C1C;
+	border-radius: 0.8vh;
 	
     font-size: 1.8vh;
     font-family: 'Lexend', sans-serif;
@@ -54,15 +54,15 @@ nav {
 
 nav:hover {
 	background-color: #1C1C1C;
-    color: #ECECEC;
 }
 
 nav div.navigation-hyperlinks {
 	transition: 0.2s ease-in-out;
-
 	
-	margin: 1vh 0;
-	border-right: 0.25em solid #1C1C1C;
+	background-color: #ECECEC;
+	border-radius: 0.8vh 0 0 0.8vh;
+
+	padding: 1vh 0;
 	display: inline-block;
 	width: auto;
 	height: auto;
@@ -71,23 +71,36 @@ nav div.navigation-hyperlinks {
 nav div.navigation-hyperlinks a {
 	transition: 0.2s ease-in-out;
 	    
+	border-right: 0.25em solid #1C1C1C;
 	text-align: right;
     color: #1C1C1C;
     text-decoration: none;
-    padding-right: 1vmin;
-	padding-left: 1vh;
+   	padding: 0 1vh;
 	
 	display: block;
 	
-	width: auto;
-}
-
-nav:hover div.navigation-hyperlinks {
-	border-right: 0.25em solid #ECECEC;
+	width: 5em;
 }
 
 nav:hover div.navigation-hyperlinks a {
-    color: #ECECEC;
+	border-right: 0.25em solid #ECECEC;
+}
+
+nav:hover div.navigation-hyperlinks:hover a:hover {
+	border-right: 0.25em solid #ECECEC;
+}
+
+nav:hover div.navigation-hyperlinks:hover > a:not(:hover) {
+	border-right: 0.25em solid #1C1C1C;
+}
+
+
+nav div.navigation-hyperlinks:hover {
+	background-color: #1C1C1C;
+}
+
+nav div.navigation-hyperlinks:hover a {
+	color: #ECECEC;
 }
 
 nav div.navigation-hyperlinks a:hover {
@@ -103,20 +116,27 @@ nav:hover div.navigation-hyperlinks a:hover {
 }
 
 nav a.navigation-logo {
+	background-color: #ECECEC;
+	border-radius: 0 0.8vh 0.8vh 0;
+    color: #1C1C1C;
+		
 	width: auto;
-	margin: 1vh 0;
 	padding: 0 1vh;
-	height: 6.6vh;
 	transition: 0.2s ease-in-out;
+	
+	display: flex;
 }
 
 nav a.navigation-logo:hover {
-    cursor: pointer;
     background-color: #1C1C1C;
 }
 
-nav:hover a.navigation-logo:hover {
-    background-color: #ECECEC;
+nav a.navigation-logo img {
+	top: 0%;
+	bottom: 0%;
+	margin: 1vh 0;
+	height: auto;
+	max-height: 6.6vh;
 }
 
 /*Backdrop*/
@@ -131,17 +151,17 @@ section > .backdrop {
 
 @keyframes animatedBackground {
 	from { background-position: 0 0; }
-	to { background-position: 0 100vh; }
+	to { background-position: 0 120vh; }
 }
 
 .pattern {
-	background-size: 20vw;
+	background-size: 40vh;
     background-image: url("Assets/Graphics/BackdropPattern.png");
 
 	width: 100%;
 	height: inherit;
 	
-	animation: animatedBackground 40s linear infinite;
+	animation: animatedBackground 60s linear infinite;
 }
 
 .backdrop {
@@ -307,6 +327,73 @@ section#projects div.--center-more-projects {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+/*Project Pages*/
+section.project-detail {
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	margin: 2vh 20vw;
+	width: 60vw;
+	
+	font-family: 'Lexend', sans-serif;
+}
+
+section.project-detail p, ul {
+	margin: 0.5em 0;
+	font-weight: 300;
+	color: #ECECEC;
+}
+
+section.project-detail h1 {
+	margin: 0.5em 0;
+	font-size: 2em;
+	font-weight: 700;
+	color: #ECECEC;
+}
+
+section.project-detail div.project-gallery {
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+		
+	margin: 1vh 0;
+}
+
+section.project-detail div.project-gallery img {
+	margin: 0 1vh;
+	object-fit: cover;
+	flex-basis: 25vw;
+	min-width: 0vw;
+}
+
+section.project-detail div.--center-game-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+section.project-detail div.--center-game-link a {
+	text-decoration: none;
+}
+
+section.project-detail div.game-link {
+	margin: 0.5em 0;
+	display: inline-block;
+	border-radius: 1.5vh;
+	background-color: #4C4C4C;
+}
+
+section.project-detail div.game-link h1 {
+	margin: 0;
+	font-size: 2em;
+	display: flex;
+	text-align: center;
+	padding: 0.5em;
+	width: auto;
 }
 
 /*Footer/Socials*/

@@ -23,30 +23,24 @@
 		<header>
             <nav>
 				<script type='text/javascript'>
-					var sourceSwapLogo = function () {
+					var setDark = function () {
 						var $this = $(this).children('img').eq(0);
-						var newSource = $this.data('alt-src');
+						var newSource = $this.data('dark');
 						
-						$this.data('alt-src', $this.attr('src'));
 						$this.attr('src', newSource);
 						$this.fadeIn();
 					}
 					
-					var sourceSwapMenu = function () {
-						var $this = $(this).children('a').eq(0).children('img').eq(0);
-						var newSource = $this.data('alt-src');
+					var setLight = function () {
+						var $this = $(this).children('img').eq(0);
+						var newSource = $this.data('light');
 						
-						$this.data('alt-src', $this.attr('src'));
 						$this.attr('src', newSource);
 						$this.fadeIn();
 					}
-
-					$(function () {
-						$('a.navigation-logo').hover(sourceSwapLogo, sourceSwapLogo);
-					});
 					
 					$(function () {
-						$('nav').hover(sourceSwapMenu, sourceSwapMenu);
+						$('a.navigation-logo').hover(setLight, setDark);
 					});
 				</script>
 				<div class="navigation-hyperlinks">
@@ -55,23 +49,13 @@
 					<a href="Files/CV.pdf" target="_blank">CV</a>
 				</div>
 				<a href="index.html" class="navigation-logo">
-					<img data-alt-src="Assets/Banner_White.png" src="Assets/Banner_Black.png" class="logo">
+					<img data-light="Assets/Banner_White.png" data-dark="Assets/Banner_Black.png" src="Assets/Banner_Black.png" class="logo">
 				</a>
             </nav>
 		</header>
 		<section id="intro">
-			<div class="backdrop">
-				<div class="pattern">
-					<div class="profile">
-						<img src="Assets/Portrait.png">
-						<div class="profile-info">
-							<div>
-								<h1>Naomi Nemo Wirén</h1>
-								<p>Programmer, Writer, Academic</p>
-							</div>
-						</div>
-					</div>
-				</div>
+			<div class="backdrop" style="height:12vh">
+				<div class="pattern"></div>
 			</div>
 		</section>
 		<section id="content">
@@ -82,15 +66,6 @@
 						<div class="project-text">
 							<h1>Anything World - Unity Plugin</h1>
 							<p>Developed the tool for Unity users to interface with the capabilities of Anything World, ranging from streaming in assets from the web to ML-powered automatic rigging.</p>
-						</div>
-					</div>
-				</a>
-				<a href="ProjectPages/monstroushetero.html">
-					<div class="project">
-						<img src="Assets/Thumbnails/ELVTRGameWriting.png" class="thumbnail">
-						<div class="project-text">
-							<h1>Monstrous Hetero</h1>
-							<p>A game story developed during the Game Writing course headed by Lorne Nudel.</p>
 						</div>
 					</div>
 				</a>
@@ -112,6 +87,44 @@
 						</div>
 					</div>
 				</a>
+				<!--<a href="">
+					<div class="project">
+						<img src="Assets/Thumbnails/MissingImage.jpg" class="thumbnail">
+						<div class="project-text">
+							<h1>Empty</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nisi mi, rhoncus eu congue nec, ornare eu eros. Nulla facilisi. Nulla id velit vel leo hendrerit suscipit. Vestibulum sapien nunc.</p>
+						</div>
+					</div>
+				</a>
+				<a href="">
+					<div class="project">
+						<img src="Assets/Thumbnails/MissingImage.jpg" class="thumbnail">
+						<div class="project-text">
+							<h1>Empty</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nisi mi, rhoncus eu congue nec, ornare eu eros. Nulla facilisi. Nulla id velit vel leo hendrerit suscipit. Vestibulum sapien nunc.</p>
+						</div>
+					</div>
+				</a>
+				<a href="">
+					<div class="project">
+						<img src="Assets/Thumbnails/MissingImage.jpg" class="thumbnail">
+						<div class="project-text">
+							<h1>Empty</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nisi mi, rhoncus eu congue nec, ornare eu eros. Nulla facilisi. Nulla id velit vel leo hendrerit suscipit. Vestibulum sapien nunc.</p>
+						</div>
+					</div>
+				</a>-->
+			</section>
+			<section id="projects">
+				<!--<a href="ProjectPages/suiphobia.html">
+					<div class="project">
+						<img src="Assets/Thumbnails/ELVTRGameWriting.png" class="thumbnail">
+						<div class="project-text">
+							<h1>Suiphobia</h1>
+							<p>A game story developed during the Game Writing course headed by Lorne Nudel. Still in development.</p>
+						</div>
+					</div>
+				</a>-->
 				<a href="ProjectPages/maverickaviation.html">
 					<div class="project">
 						<img src="Assets/Thumbnails/MaverickAviation.png" class="thumbnail">
@@ -130,9 +143,7 @@
 						</div>
 					</div>
 				</a>
-			</section>
-			<section id="projects">
-				<a href="">
+				<!--<a href="">
 					<div class="project">
 						<img src="Assets/Thumbnails/MissingImage.jpg" class="thumbnail">
 						<div class="project-text">
@@ -158,34 +169,7 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nisi mi, rhoncus eu congue nec, ornare eu eros. Nulla facilisi. Nulla id velit vel leo hendrerit suscipit. Vestibulum sapien nunc.</p>
 						</div>
 					</div>
-				</a>
-				<a href="">
-					<div class="project">
-						<img src="Assets/Thumbnails/MissingImage.jpg" class="thumbnail">
-						<div class="project-text">
-							<h1>Empty</h1>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nisi mi, rhoncus eu congue nec, ornare eu eros. Nulla facilisi. Nulla id velit vel leo hendrerit suscipit. Vestibulum sapien nunc.</p>
-						</div>
-					</div>
-				</a>
-				<a href="">
-					<div class="project">
-						<img src="Assets/Thumbnails/MissingImage.jpg" class="thumbnail">
-						<div class="project-text">
-							<h1>Empty</h1>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nisi mi, rhoncus eu congue nec, ornare eu eros. Nulla facilisi. Nulla id velit vel leo hendrerit suscipit. Vestibulum sapien nunc.</p>
-						</div>
-					</div>
-				</a>
-				<a href="">
-					<div class="project">
-						<img src="Assets/Thumbnails/MissingImage.jpg" class="thumbnail">
-						<div class="project-text">
-							<h1>Empty</h1>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nisi mi, rhoncus eu congue nec, ornare eu eros. Nulla facilisi. Nulla id velit vel leo hendrerit suscipit. Vestibulum sapien nunc.</p>
-						</div>
-					</div>
-				</a>
+				</a>-->
 			</section>
 		</section>
 	</body>

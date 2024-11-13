@@ -17,36 +17,30 @@
 		<script src="https://kit.fontawesome.com/14b0c5612d.js" crossorigin="anonymous"></script>
 		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js'></script>
 
-        <title>Naomi Wirén | Anything World - Unity Plugin</title>
+        <title>Naomi Wirén | XR Jetpack Simulator</title>
 	</head>
 	<body>
 		<header>
             <nav>
 				<script type='text/javascript'>
-					var sourceSwapLogo = function () {
+					var setDark = function () {
 						var $this = $(this).children('img').eq(0);
-						var newSource = $this.data('alt-src');
+						var newSource = $this.data('dark');
 						
-						$this.data('alt-src', $this.attr('src'));
 						$this.attr('src', newSource);
 						$this.fadeIn();
 					}
 					
-					var sourceSwapMenu = function () {
-						var $this = $(this).children('a').eq(0).children('img').eq(0);
-						var newSource = $this.data('alt-src');
+					var setLight = function () {
+						var $this = $(this).children('img').eq(0);
+						var newSource = $this.data('light');
 						
-						$this.data('alt-src', $this.attr('src'));
 						$this.attr('src', newSource);
 						$this.fadeIn();
 					}
-
-					$(function () {
-						$('a.navigation-logo').hover(sourceSwapLogo, sourceSwapLogo);
-					});
 					
 					$(function () {
-						$('nav').hover(sourceSwapMenu, sourceSwapMenu);
+						$('a.navigation-logo').hover(setLight, setDark);
 					});
 				</script>
 				<div class="navigation-hyperlinks">
@@ -55,7 +49,7 @@
 					<a href="../Files/CV.pdf" target="_blank">CV</a>
 				</div>
 				<a href="../index.html" class="navigation-logo">
-					<img data-alt-src="../Assets/Banner_White.png" src="../Assets/Banner_Black.png" class="logo">
+					<img data-light="../Assets/Banner_White.png" data-dark="../Assets/Banner_Black.png" src="../Assets/Banner_Black.png" class="logo">
 				</a>
             </nav>
 		</header>
@@ -72,8 +66,21 @@
 			</div>
 		</section>
 		
-		<div class="project">
-			<p>Developed as part of a final-year coursework for Maverick Aviation. Saw the interfacing between Unity and a real-time physics simulator, and further communication with a 4DoF platform and Valve Index VR headset.</p>
-		</div>
+		<section class="project-detail">
+			<h1>XR Jetpack Simulator</h1>
+			<p></p>
+			<h1>Responsibilities</h1>
+			<ul>
+				<li></li>
+			</ul>
+			<div class="project-gallery">
+				<img src="../Assets/Thumbnails/MissingImage.jpg" style="flex: 1 1">
+				<img src="../Assets/Thumbnails/MissingImage.jpg" style="flex: 1 1">
+			</div>
+			<div class="project-gallery">	
+				<img src="../Assets/Thumbnails/MissingImage.jpg" style="flex: 1 1">
+				<img src="../Assets/Thumbnails/MissingImage.jpg" style="flex: 1 1">
+			</div>
+		</section>
 	</body>
 </html>

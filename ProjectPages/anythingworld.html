@@ -23,30 +23,24 @@
 		<header>
             <nav>
 				<script type='text/javascript'>
-					var sourceSwapLogo = function () {
+					var setDark = function () {
 						var $this = $(this).children('img').eq(0);
-						var newSource = $this.data('alt-src');
+						var newSource = $this.data('dark');
 						
-						$this.data('alt-src', $this.attr('src'));
 						$this.attr('src', newSource);
 						$this.fadeIn();
 					}
 					
-					var sourceSwapMenu = function () {
-						var $this = $(this).children('a').eq(0).children('img').eq(0);
-						var newSource = $this.data('alt-src');
+					var setLight = function () {
+						var $this = $(this).children('img').eq(0);
+						var newSource = $this.data('light');
 						
-						$this.data('alt-src', $this.attr('src'));
 						$this.attr('src', newSource);
 						$this.fadeIn();
 					}
-
-					$(function () {
-						$('a.navigation-logo').hover(sourceSwapLogo, sourceSwapLogo);
-					});
 					
 					$(function () {
-						$('nav').hover(sourceSwapMenu, sourceSwapMenu);
+						$('a.navigation-logo').hover(setLight, setDark);
 					});
 				</script>
 				<div class="navigation-hyperlinks">
@@ -55,7 +49,7 @@
 					<a href="../Files/CV.pdf" target="_blank">CV</a>
 				</div>
 				<a href="../index.html" class="navigation-logo">
-					<img data-alt-src="../Assets/Banner_White.png" src="../Assets/Banner_Black.png" class="logo">
+					<img data-light="../Assets/Banner_White.png" data-dark="../Assets/Banner_Black.png" src="../Assets/Banner_Black.png" class="logo">
 				</a>
             </nav>
 		</header>
@@ -72,8 +66,32 @@
 			</div>
 		</section>
 		
-		<div class="project">
-			<p>Developed the tool for Unity users to interface with the capabilities of Anything World, ranging from streaming in assets from the web to ML-powered automatic rigging.</p>
-		</div>
+		<section class="project-detail">
+			<h1>Anything World</h1>
+			<p>Between 2022 and 2024, I worked as a 3D Software Engineer for the London upstart Anything World. In the years since, the studio has grown to be over 30 people and has seen a large growth in product variety, from server-side automatic rigging and asset streaming in a large variety of commercial game-centric tools and engines, such as Unity, Unreal, and Blender.<br><br>During the period of May 2022 to September 2023, my duties primarily focused on UX and UI improvements, with my lead taking charge in developing the systems of the tool. During this time, the two of us worked on the Unity plugin by ourselves. In September 2023, after my lead's departure from the company, I took responsibility over the Unity plugin primarily, introducing features such as the server-side ML-powered automatic rigging into the Unity plugin, as well as refining the user experience and codebase.</p>
+			<h1>Responsibilities</h1>
+			<ul>
+				<li>Worked extensively with editor-side development in the Unity Engine.</li>
+				<li>Implemented web API-centric mechanics and integrated them into the Unity Editor.</li>
+				<li>Translated Figma UX designs into a practical user interface using the Unity IMGUI systems.</li>
+				<li>Represented the company at national and international conferences, such as GDC, Develop:Brighton, and Web Summit.</li>
+				<li>Held presentations and product showcases, ranging from non-profit organisations such as Grads in Games and Into Games to prospecting clients such as game studios.</li>
+			</ul>
+			<div class="--center-game-link">
+				<a href="https://anything.world/" target="_blank">
+					<div class="game-link">
+						<h1>Download the Tool Here</h1>
+					</div>
+				</a>
+			</div>
+			<div class="project-gallery">
+				<img src="anythingworld.html_Assets/AnythingWorld_Browser.png" style="flex: 1 1">
+				<img src="../Assets/AboutMe_Backdrop.png" style="flex: 4.8 1">
+			</div>
+			<div class="project-gallery">	
+				<img src="anythingworld.html_Assets/GDC.png" style="flex: 1 1">
+				<img src="anythingworld.html_Assets/AnythingWorld_AA.png" style="flex: 0.49 1">
+			</div>
+		</section>
 	</body>
 </html>
