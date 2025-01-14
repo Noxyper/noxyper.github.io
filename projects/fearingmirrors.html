@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+	    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+		
+		<link rel="icon" type="image/png" href="../Assets/Icon.png">
+        <link rel="stylesheet" type="text/css" href="../style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@700&display=swap" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/14b0c5612d.js" crossorigin="anonymous"></script>
+		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js'></script>
+
+        <title>Naomi Wirén | Fearing Mirrors</title>
+	</head>
+	<body>
+		<header>
+            <nav>
+				<script type='text/javascript'>
+					var setDark = function () {
+						var $this = $(this).children('img').eq(0);
+						var newSource = $this.data('dark');
+						
+						$this.attr('src', newSource);
+						$this.fadeIn();
+					}
+					
+					var setLight = function () {
+						var $this = $(this).children('img').eq(0);
+						var newSource = $this.data('light');
+						
+						$this.attr('src', newSource);
+						$this.fadeIn();
+					}
+					
+					$(function () {
+						$('a.navigation-logo').hover(setLight, setDark);
+					});
+				</script>
+				<div class="navigation-hyperlinks">
+					<a href="../projects.html">Projects</a>
+					<a href="../index.html#about-me">About Me</a>
+					<a href="../files/CV.pdf" target="_blank">CV</a>
+				</div>
+				<a href="../index.html" class="navigation-logo">
+					<img data-light="../assets/Banner_White.png" data-dark="../assets/Banner_Black.png" src="../assets/Banner_Black.png" class="logo">
+				</a>
+            </nav>
+		</header>
+		<section id="intro">
+			<div class="backdrop">
+				<div class="pattern">
+					<div class="profile">
+						<img src="../assets/thumbnails/ELVTRGameWriting_Alt.png">
+						<div class="profile-info">
+							<h1>Fearing Mirrors</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<section class="project-detail">
+			<h1>Fearing Mirrors</h1>
+			<p>For six weeks, I studied game writing skills from <a href="https://www.linkedin.com/in/lornenudel">Lorne Nudel</a>, a senior scriptwriter at Ubisoft Bordeaux. Under him, I was taught skills pertaining to writing within games specifically, such as scene work, character development, world and lore establishment, as well as being taught about the writer's workflow within game studios, extending to working with voice actor and motion capture artists, and traditional narrative hierarchies at game studios.<br><br>Throughout the course, I worked on a project called "Fearing Mirrors", a story which puts the player in the shoes of a prepubescent teenager as they are struggling with themselves changing against their will. The game's story touches primarily on themes of dysmorphia, with the player changing into a body they may not expect.<br><br>Within this project, three pieces were created.</p>
+			<ul>
+				<li>A character biography, introducing the story's protagonist "Shawn/Madison Roberts"</li>
+				<li>A lore item, created to deliver some additional information about the protagonist's life and background</li>
+				<li>A script, introducing conflict to the protagonist that challenge their personal fears of outward and inward perception</li>
+			</ul>
+			<p>Each piece can be read here.</p>
+			<div class="multiple-buttons" style="margin-bottom: 0">
+				<div class="--center-game-link">
+					<a href="fearingmirrors.html_Assets/CharacterBiography.pdf" target="_blank">
+						<div class="game-link">
+							<h1>Character Biography</h1>
+						</div>
+					</a>
+				</div>
+				<div class="--center-game-link">
+					<a href="fearingmirrors.html_Assets/LoreItem.pdf" target="_blank">
+						<div class="game-link">
+							<h1>Lore Item</h1>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="multiple-buttons" style="margin-top: 0">
+				<div class="--center-game-link">
+					<a href="fearingmirrors.html_Assets/ScriptShawn.pdf" target="_blank">
+						<div class="game-link">
+							<h1>Script (Shawn)</h1>
+						</div>
+					</a>
+				</div>
+				<div class="--center-game-link">
+					<a href="fearingmirrors.html_Assets/ScriptMadison.pdf" target="_blank">
+						<div class="game-link">
+							<h1>Script (Madison)</h1>
+						</div>
+					</a>
+				</div>
+			</div>
+			<h1>Skills Showcased</h1>
+			<ul>
+				<li>Character Development</li>
+				<li>Worldbuilding</li>
+				<li>Scriptwriting</li>
+				<li>Delivering Feedback and Critique</li>
+				<li>Extracurricular Initiative and Collaboration</li>
+			</ul>
+		</section>
+	</body>
+</html>

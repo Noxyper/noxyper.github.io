@@ -346,6 +346,12 @@ section.project-detail p, ul {
 	color: #ECECEC;
 }
 
+section.project-detail p a {
+	font-weight: 400;
+	color: #ECECEC;
+	font-style: underline;
+}
+
 section.project-detail h1 {
 	margin: 0.5em 0;
 	font-size: 2em;
@@ -368,6 +374,20 @@ section.project-detail div.project-gallery img {
 	object-fit: cover;
 	flex-basis: 25vw;
 	min-width: 0vw;
+}
+
+section.project-detail div.multiple-buttons {
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+		
+	margin: 1vh 0;
+}
+
+section.project-detail div.multiple-buttons div.--center-game-link {
+	padding: 0 0.5vw;
 }
 
 section.project-detail div.--center-game-link {
